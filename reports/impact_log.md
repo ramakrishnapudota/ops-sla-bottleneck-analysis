@@ -393,3 +393,65 @@ Refresh cadence: Simulated daily pipeline (batch)
 - Tier 3 breaches avoided (S1 eligible cohort, incl CW): 1003
 - Total hours saved (combined): 61499.86
 
+
+---
+
+### Step 9 — Executive Dashboard Assembly & Publication
+**Date:** 2025-11-13
+
+**What changed:**
+- Assembled executive-facing Tableau dashboard from curated mart tables
+- Structured dashboard into narrative flow:
+  - SLA trend monitoring
+  - Tail percentile decomposition
+  - Tier-level risk segmentation
+  - Bottleneck stage isolation
+  - Scenario impact quantification
+- Published interactive dashboard to Tableau Public
+
+**Artifacts created/updated:**
+- tableau/ops_sla_bottleneck_dashboard.twbx
+- assets/dashboard_full.png
+- assets/bottleneck_tier3.png
+- assets/scenario_impact.png
+- reports/run_summaries/step9_export_summary.json
+- reports/impact_log.md
+
+**Live Dashboard:**
+https://public.tableau.com/app/profile/rama.krishna.pudota/viz/OPSSLA/OperationalBottleneckSLABreachAnalysis
+
+**Notes:**
+- All business logic implemented in SQL; Tableau used strictly for visualization.
+- Dashboard structured for executive consumption (monitoring + actionability).
+
+
+---
+
+### Step 10 — Project Finalization & Public Release (v1.0)
+**Date:** 2025-11-14
+
+**What changed:**
+- Finalized repository structure (cleaned scaffolding artifacts)
+- Added professional README with:
+  - Business context
+  - Transformation methodology
+  - Bottleneck findings
+  - Scenario modeling results
+  - Reproducibility instructions
+- Published repository publicly on GitHub
+- Versioned release as v1.0
+
+**Artifacts created/updated:**
+- README.md
+- .gitignore
+- assets/*
+- tableau/*
+- reports/impact_log.md
+
+**Release Tag:**
+v1.0 — Operational SLA analysis pipeline and executive dashboard release
+
+**Notes:**
+- Repository structured for reproducibility and portfolio presentation.
+- Generated artifacts excluded from version control (exports, local DB, environments).
+
