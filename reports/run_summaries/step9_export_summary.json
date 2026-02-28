@@ -1,0 +1,62 @@
+{
+  "step": 9,
+  "runtime_seconds": 0.025,
+  "exports": [
+    {
+      "table": "mart.sla_daily",
+      "file": "data/exports/mart_sla_daily.csv",
+      "rows": 180,
+      "cols": 18,
+      "seconds": 0.011
+    },
+    {
+      "table": "mart.sla_by_tier_case_type",
+      "file": "data/exports/mart_sla_by_tier_case_type.csv",
+      "rows": 9,
+      "cols": 15,
+      "seconds": 0.001
+    },
+    {
+      "table": "mart.staffing_daily",
+      "file": "data/exports/mart_staffing_daily.csv",
+      "rows": 180,
+      "cols": 6,
+      "seconds": 0.001
+    },
+    {
+      "table": "mart.backlog_daily_proxy",
+      "file": "data/exports/mart_backlog_daily_proxy.csv",
+      "rows": 180,
+      "cols": 6,
+      "seconds": 0.001
+    },
+    {
+      "table": "mart.congestion_daily",
+      "file": "data/exports/mart_congestion_daily.csv",
+      "rows": 180,
+      "cols": 7,
+      "seconds": 0.001
+    },
+    {
+      "table": "mart.driver_stage_durations",
+      "file": "data/exports/mart_driver_stage_durations.csv",
+      "rows": 3,
+      "cols": 19,
+      "seconds": 0.001
+    },
+    {
+      "table": "mart.driver_reopen_impact",
+      "file": "data/exports/mart_driver_reopen_impact.csv",
+      "rows": 18,
+      "cols": 8,
+      "seconds": 0.001
+    },
+    {
+      "table": "mart.scenario_results",
+      "file": "data/exports/mart_scenario_results.csv",
+      "rows": 3,
+      "cols": 10,
+      "seconds": 0.001
+    }
+  ]
+}

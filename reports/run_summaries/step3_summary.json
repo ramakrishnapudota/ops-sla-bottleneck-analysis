@@ -1,0 +1,52 @@
+{
+  "step": 3,
+  "runtime_seconds": {
+    "by_file": {
+      "sql/raw/qa_00_row_counts.sql": 0.026,
+      "sql/raw/qa_01_event_integrity.sql": 0.059,
+      "sql/raw/qa_02_case_milestones.sql": 0.042
+    },
+    "end_to_end": 0.646
+  },
+  "counts": {
+    "raw_cases": 300000,
+    "raw_events_log": 1931252,
+    "raw_calendar_dim": 180,
+    "raw_staffing_schedule": 360
+  },
+  "intake_coverage": {
+    "min_intake_date": "2025-07-01 00:00:00",
+    "max_intake_date": "2025-12-27 00:00:00",
+    "distinct_intake_days": 180
+  },
+  "events_per_case": {
+    "total_events": 1931252,
+    "distinct_cases_in_events": 300000,
+    "avg_events_per_case": 6.438
+  },
+  "event_integrity_pct": {
+    "pct_missing_event_ts": 1.783,
+    "pct_duplicate_flag": 1.971,
+    "pct_late_arriving_flag": 1.489,
+    "pct_tz_inconsistent": 2.942
+  },
+  "duplicate_groups": {
+    "duplicate_groups": 37405,
+    "duplicate_extra_rows": 37405.0
+  },
+  "pct_ingestion_before_event_ts": 2.916,
+  "milestone_coverage_pct": {
+    "cases_in_events": 300000,
+    "pct_cases_with_triage": 99.389,
+    "pct_cases_with_resolved": 98.212,
+    "pct_cases_with_cancelled": 1.202,
+    "pct_cases_with_reopened": 4.66,
+    "pct_cases_with_escalated": 3.476,
+    "pct_cases_with_customer_wait": 27.729
+  },
+  "triage_before_intake_pct": {
+    "cases_with_both": 298166,
+    "pct_triage_before_intake": 2.9048
+  },
+  "pct_cases_both_cancelled_and_resolved": 0.0
+}

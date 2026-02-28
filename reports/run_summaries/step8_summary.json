@@ -1,0 +1,59 @@
+{
+  "step": 8,
+  "runtime_seconds": {
+    "by_file": {
+      "sql/staging/s8_01_reopen_penalty.sql": 0.042,
+      "sql/mart/s8_01_scenario_results.sql": 0.013
+    },
+    "end_to_end": 0.472
+  },
+  "counts": {
+    "reopen_penalty_rows": 13791,
+    "scenario_results_rows": 3
+  },
+  "scenario_results": {
+    "S1_TIER3_reduce_investigation_to_reviewQA_20pct": {
+      "scenario_name": "S1_TIER3_reduce_investigation_to_reviewQA_20pct",
+      "eligible_cases": 8243,
+      "baseline_breach_pct_inc": 28.63,
+      "scenario_breach_pct_inc": 16.462,
+      "baseline_breaches_inc": 2360.0,
+      "scenario_breaches_inc": 1357.0,
+      "breaches_avoided_inc": 1003.0,
+      "resolution_hours_saved": 28198.55,
+      "reopen_hours_saved": 0.0,
+      "total_hours_saved": 28198.55
+    },
+    "S2_reduce_reopens_25pct": {
+      "scenario_name": "S2_reduce_reopens_25pct",
+      "eligible_cases": 13791,
+      "baseline_breach_pct_inc": null,
+      "scenario_breach_pct_inc": null,
+      "baseline_breaches_inc": null,
+      "scenario_breaches_inc": null,
+      "breaches_avoided_inc": null,
+      "resolution_hours_saved": 0.0,
+      "reopen_hours_saved": 33301.31,
+      "total_hours_saved": 33301.31
+    },
+    "S3_combined_S1_plus_S2": {
+      "scenario_name": "S3_combined_S1_plus_S2",
+      "eligible_cases": 8243,
+      "baseline_breach_pct_inc": 28.63,
+      "scenario_breach_pct_inc": 16.462,
+      "baseline_breaches_inc": 2360.0,
+      "scenario_breaches_inc": 1357.0,
+      "breaches_avoided_inc": 1003.0,
+      "resolution_hours_saved": 28198.55,
+      "reopen_hours_saved": 33301.31,
+      "total_hours_saved": 61499.86
+    }
+  },
+  "notes": {
+    "eligibility": "S1 applies only to Tier 3 cases with milestone-based stage decomposition available; S2 uses reopen penalty minutes as rework proxy.",
+    "sla_threshold_minutes": {
+      "sla_a": 1440,
+      "sla_b": 120
+    }
+  }
+}

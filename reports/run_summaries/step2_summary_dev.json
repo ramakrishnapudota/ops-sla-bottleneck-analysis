@@ -1,0 +1,39 @@
+{
+  "step": 2,
+  "mode": "dev",
+  "config": {
+    "window_days": 180,
+    "start_date": "2025-07-01",
+    "cases_target": 50000
+  },
+  "generated": {
+    "case_rows_expected": 50000,
+    "event_rows_expected": 321957,
+    "case_part_files": 180,
+    "event_part_files": 180,
+    "calendar_rows": 180,
+    "staffing_rows": 360
+  },
+  "loaded_counts": {
+    "raw_calendar_dim": 180,
+    "raw_staffing_schedule": 360,
+    "raw_cases": 50000,
+    "raw_events_log": 321957
+  },
+  "data_quality_pct": {
+    "events_missing_event_ts_pct": 1.797134399935395,
+    "events_duplicate_flag_pct": 1.982252288349065,
+    "events_late_arriving_flag_pct": 1.4908823227946588,
+    "events_tz_inconsistent_pct": 2.8910693042859763
+  },
+  "runtime_seconds": {
+    "generate_total": 4.437,
+    "load_total": 0.25,
+    "end_to_end": 4.687
+  },
+  "paths": {
+    "cases_dir": "data/generated/cases",
+    "events_dir": "data/generated/events_log",
+    "db_path": "ops_warehouse.duckdb"
+  }
+}

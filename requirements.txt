@@ -1,0 +1,10 @@
+duckdb==1.0.0
+pandas==2.2.2
+numpy==2.0.1
+
+scipy==1.14.1
+statsmodels==0.14.2
+
+matplotlib==3.9.2
+seaborn==0.13.2
+pyarrow==17.0.0

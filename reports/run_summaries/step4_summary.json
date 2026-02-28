@@ -1,0 +1,27 @@
+{
+  "step": 4,
+  "runtime_seconds": {
+    "by_file": {
+      "sql/staging/s4_01_events_dedup.sql": 0.663,
+      "sql/staging/s4_02_events_clean.sql": 0.261,
+      "sql/staging/s4_03_case_milestones.sql": 0.343
+    },
+    "end_to_end": 1.786
+  },
+  "counts": {
+    "raw_events_log": 1931252,
+    "staging_events_deduped": 1893847,
+    "staging_events_clean": 1893847,
+    "staging_case_milestones": 300000
+  },
+  "dedup_removed_rows": 37405,
+  "triage_before_intake_pct": {
+    "raw_signal": 2.9048,
+    "after_milestone_fix": 2.9326
+  },
+  "anomaly_rates_pct": {
+    "pct_event_ts_missing": 1.818,
+    "pct_tz_inconsistent": 2.941,
+    "pct_ingestion_before_event_ts": 2.957
+  }
+}

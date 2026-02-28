@@ -1,0 +1,31 @@
+{
+  "step": 6,
+  "runtime_seconds": {
+    "by_file": {
+      "sql/mart/s6_01_sla_daily.sql": 0.042,
+      "sql/mart/s6_02_sla_by_tier_case_type.sql": 0.025,
+      "sql/mart/s6_03_staffing_daily.sql": 0.002,
+      "sql/mart/s6_04_backlog_daily_proxy.sql": 0.023,
+      "sql/mart/s6_05_congestion_daily.sql": 0.003
+    },
+    "end_to_end": 0.532
+  },
+  "counts": {
+    "mart_sla_daily": 180,
+    "mart_sla_by_tier_case_type": 9,
+    "mart_staffing_daily": 180,
+    "mart_backlog_daily_proxy": 180,
+    "mart_congestion_daily": 180
+  },
+  "headline_daily_avgs_pct": {
+    "avg_sla_b_breach_pct_daily": 8.881,
+    "avg_sla_a_breach_pct_inc_cw_daily": 5.702,
+    "avg_sla_a_breach_pct_pause_cw_daily": 2.32
+  },
+  "congestion_summary": {
+    "avg_congestion_index": 207.0102,
+    "cong_p50": 127.537,
+    "cong_p90": 493.0999699999999,
+    "cong_p95": 610.9624999999996
+  }
+}

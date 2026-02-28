@@ -1,0 +1,3036 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20253.26.0206.0336                               -->
+<workbook original-version='18.1' source-build='2025.3.3 (20253.26.0206.0336)' source-platform='mac' version='18.1' xml:base='https://public.tableau.com' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <repository-location id='OPSSLA' path='/workbooks' revision='1.2' />
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='mart_sla_daily' inline='true' name='federated.14qlk4x0myce1d1h93k8g15rb1td' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='mart_sla_daily' name='textscan.0bsfugx13hgcci17t9gk90yhok58'>
+            <connection class='textscan' directory='/Users/spartan/Desktop/Projects/ops-sla-bottleneck-analysis/data/exports' filename='mart_sla_daily.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0bsfugx13hgcci17t9gk90yhok58' name='mart_sla_daily.csv' table='[mart_sla_daily#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='date' name='intake_date' ordinal='0' />
+            <column datatype='integer' name='cases_in_sla_table' ordinal='1' />
+            <column datatype='real' name='cases_with_triage' ordinal='2' />
+            <column datatype='real' name='sla_b_breach_pct' ordinal='3' />
+            <column datatype='real' name='ft_p50_min' ordinal='4' />
+            <column datatype='real' name='ft_p90_min' ordinal='5' />
+            <column datatype='real' name='ft_p95_min' ordinal='6' />
+            <column datatype='real' name='cases_resolved' ordinal='7' />
+            <column datatype='real' name='sla_a_breach_pct_including_cw' ordinal='8' />
+            <column datatype='real' name='sla_a_breach_pct_paused_cw' ordinal='9' />
+            <column datatype='real' name='fr_p50_min_inc_cw' ordinal='10' />
+            <column datatype='real' name='fr_p90_min_inc_cw' ordinal='11' />
+            <column datatype='real' name='fr_p95_min_inc_cw' ordinal='12' />
+            <column datatype='real' name='fr_p50_min_pause_cw' ordinal='13' />
+            <column datatype='real' name='fr_p90_min_pause_cw' ordinal='14' />
+            <column datatype='real' name='fr_p95_min_pause_cw' ordinal='15' />
+            <column datatype='real' name='dq_triage_missing_pct' ordinal='16' />
+            <column datatype='real' name='dq_terminal_missing_pct' ordinal='17' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[mart_sla_daily.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>intake_date</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[intake_date]</local-name>
+            <parent-name>[mart_sla_daily.csv]</parent-name>
+            <remote-alias>intake_date</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_daily.csv_3A23DEC02871452283FD540E835E65D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cases_in_sla_table</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[cases_in_sla_table]</local-name>
+            <parent-name>[mart_sla_daily.csv]</parent-name>
+            <remote-alias>cases_in_sla_table</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_daily.csv_3A23DEC02871452283FD540E835E65D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cases_with_triage</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cases_with_triage]</local-name>
+            <parent-name>[mart_sla_daily.csv]</parent-name>
+            <remote-alias>cases_with_triage</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_daily.csv_3A23DEC02871452283FD540E835E65D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sla_b_breach_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[sla_b_breach_pct]</local-name>
+            <parent-name>[mart_sla_daily.csv]</parent-name>
+            <remote-alias>sla_b_breach_pct</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_daily.csv_3A23DEC02871452283FD540E835E65D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ft_p50_min</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ft_p50_min]</local-name>
+            <parent-name>[mart_sla_daily.csv]</parent-name>
+            <remote-alias>ft_p50_min</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_daily.csv_3A23DEC02871452283FD540E835E65D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ft_p90_min</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ft_p90_min]</local-name>
+            <parent-name>[mart_sla_daily.csv]</parent-name>
+            <remote-alias>ft_p90_min</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_daily.csv_3A23DEC02871452283FD540E835E65D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ft_p95_min</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ft_p95_min]</local-name>
+            <parent-name>[mart_sla_daily.csv]</parent-name>
+            <remote-alias>ft_p95_min</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_daily.csv_3A23DEC02871452283FD540E835E65D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cases_resolved</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cases_resolved]</local-name>
+            <parent-name>[mart_sla_daily.csv]</parent-name>
+            <remote-alias>cases_resolved</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_daily.csv_3A23DEC02871452283FD540E835E65D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sla_a_breach_pct_including_cw</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[sla_a_breach_pct_including_cw]</local-name>
+            <parent-name>[mart_sla_daily.csv]</parent-name>
+            <remote-alias>sla_a_breach_pct_including_cw</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_daily.csv_3A23DEC02871452283FD540E835E65D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sla_a_breach_pct_paused_cw</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[sla_a_breach_pct_paused_cw]</local-name>
+            <parent-name>[mart_sla_daily.csv]</parent-name>
+            <remote-alias>sla_a_breach_pct_paused_cw</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_daily.csv_3A23DEC02871452283FD540E835E65D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fr_p50_min_inc_cw</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fr_p50_min_inc_cw]</local-name>
+            <parent-name>[mart_sla_daily.csv]</parent-name>
+            <remote-alias>fr_p50_min_inc_cw</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_daily.csv_3A23DEC02871452283FD540E835E65D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fr_p90_min_inc_cw</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fr_p90_min_inc_cw]</local-name>
+            <parent-name>[mart_sla_daily.csv]</parent-name>
+            <remote-alias>fr_p90_min_inc_cw</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_daily.csv_3A23DEC02871452283FD540E835E65D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fr_p95_min_inc_cw</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fr_p95_min_inc_cw]</local-name>
+            <parent-name>[mart_sla_daily.csv]</parent-name>
+            <remote-alias>fr_p95_min_inc_cw</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_daily.csv_3A23DEC02871452283FD540E835E65D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fr_p50_min_pause_cw</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fr_p50_min_pause_cw]</local-name>
+            <parent-name>[mart_sla_daily.csv]</parent-name>
+            <remote-alias>fr_p50_min_pause_cw</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_daily.csv_3A23DEC02871452283FD540E835E65D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fr_p90_min_pause_cw</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fr_p90_min_pause_cw]</local-name>
+            <parent-name>[mart_sla_daily.csv]</parent-name>
+            <remote-alias>fr_p90_min_pause_cw</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_daily.csv_3A23DEC02871452283FD540E835E65D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fr_p95_min_pause_cw</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fr_p95_min_pause_cw]</local-name>
+            <parent-name>[mart_sla_daily.csv]</parent-name>
+            <remote-alias>fr_p95_min_pause_cw</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_daily.csv_3A23DEC02871452283FD540E835E65D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dq_triage_missing_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[dq_triage_missing_pct]</local-name>
+            <parent-name>[mart_sla_daily.csv]</parent-name>
+            <remote-alias>dq_triage_missing_pct</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_daily.csv_3A23DEC02871452283FD540E835E65D4]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dq_terminal_missing_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[dq_terminal_missing_pct]</local-name>
+            <parent-name>[mart_sla_daily.csv]</parent-name>
+            <remote-alias>dq_terminal_missing_pct</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_daily.csv_3A23DEC02871452283FD540E835E65D4]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.14qlk4x0myce1d1h93k8g15rb1td].[avg:fr_p50_min_inc_cw:qk]&quot;' value='P50' />
+          <alias key='&quot;[federated.14qlk4x0myce1d1h93k8g15rb1td].[avg:fr_p90_min_inc_cw:qk]&quot;' value='P90' />
+          <alias key='&quot;[federated.14qlk4x0myce1d1h93k8g15rb1td].[avg:fr_p95_min_inc_cw:qk]&quot;' value='P95' />
+          <alias key='&quot;[federated.14qlk4x0myce1d1h93k8g15rb1td].[avg:sla_a_breach_pct_including_cw:qk]&quot;' value='SLA A (Incl CW)' />
+          <alias key='&quot;[federated.14qlk4x0myce1d1h93k8g15rb1td].[avg:sla_b_breach_pct:qk]&quot;' value='SLA B (First Touch)' />
+        </aliases>
+      </column>
+      <column caption='mart_sla_daily.csv' datatype='table' name='[__tableau_internal_object_id__].[mart_sla_daily.csv_3A23DEC02871452283FD540E835E65D4]' role='measure' type='quantitative' />
+      <column caption='Cases In Sla Table' datatype='integer' name='[cases_in_sla_table]' role='measure' type='quantitative' />
+      <column caption='Cases Resolved' datatype='real' name='[cases_resolved]' role='measure' type='quantitative' />
+      <column caption='Cases With Triage' datatype='real' name='[cases_with_triage]' role='measure' type='quantitative' />
+      <column caption='Dq Terminal Missing Pct' datatype='real' name='[dq_terminal_missing_pct]' role='measure' type='quantitative' />
+      <column caption='Dq Triage Missing Pct' datatype='real' name='[dq_triage_missing_pct]' role='measure' type='quantitative' />
+      <column caption='Fr P50 Min Inc Cw' datatype='real' default-format='N' name='[fr_p50_min_inc_cw]' role='measure' type='quantitative' />
+      <column caption='Fr P50 Min Pause Cw' datatype='real' name='[fr_p50_min_pause_cw]' role='measure' type='quantitative' />
+      <column caption='Fr P90 Min Inc Cw' datatype='real' default-format='N' name='[fr_p90_min_inc_cw]' role='measure' type='quantitative' />
+      <column caption='Fr P90 Min Pause Cw' datatype='real' name='[fr_p90_min_pause_cw]' role='measure' type='quantitative' />
+      <column caption='Fr P95 Min Inc Cw' datatype='real' default-format='N' name='[fr_p95_min_inc_cw]' role='measure' type='quantitative' />
+      <column caption='Fr P95 Min Pause Cw' datatype='real' name='[fr_p95_min_pause_cw]' role='measure' type='quantitative' />
+      <column caption='Ft P50 Min' datatype='real' name='[ft_p50_min]' role='measure' type='quantitative' />
+      <column caption='Ft P90 Min' datatype='real' name='[ft_p90_min]' role='measure' type='quantitative' />
+      <column caption='Ft P95 Min' datatype='real' name='[ft_p95_min]' role='measure' type='quantitative' />
+      <column caption='Intake Date' datatype='date' name='[intake_date]' role='dimension' type='ordinal' />
+      <column caption='Sla A Breach Pct Including Cw' datatype='real' default-format='N' name='[sla_a_breach_pct_including_cw]' role='measure' type='quantitative' />
+      <column caption='Sla A Breach Pct Paused Cw' datatype='real' name='[sla_a_breach_pct_paused_cw]' role='measure' type='quantitative' />
+      <column caption='Sla B Breach Pct' datatype='real' default-format='N' name='[sla_b_breach_pct]' role='measure' type='quantitative' />
+      <column-instance column='[fr_p50_min_inc_cw]' derivation='Avg' name='[avg:fr_p50_min_inc_cw:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[fr_p90_min_inc_cw]' derivation='Avg' name='[avg:fr_p90_min_inc_cw:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[fr_p95_min_inc_cw]' derivation='Avg' name='[avg:fr_p95_min_inc_cw:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[sla_a_breach_pct_including_cw]' derivation='Avg' name='[avg:sla_a_breach_pct_including_cw:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[sla_b_breach_pct]' derivation='Avg' name='[avg:sla_b_breach_pct:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[sla_a_breach_pct_including_cw]' derivation='Count' name='[cnt:sla_a_breach_pct_including_cw:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[sla_b_breach_pct]' derivation='Count' name='[cnt:sla_b_breach_pct:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[fr_p50_min_inc_cw]' derivation='Sum' name='[sum:fr_p50_min_inc_cw:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[fr_p90_min_inc_cw]' derivation='Sum' name='[sum:fr_p90_min_inc_cw:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[fr_p95_min_inc_cw]' derivation='Sum' name='[sum:fr_p95_min_inc_cw:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[sla_a_breach_pct_including_cw]' derivation='Sum' name='[sum:sla_a_breach_pct_including_cw:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[sla_b_breach_pct]' derivation='Sum' name='[sum:sla_b_breach_pct:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/hh/d17304116dz8mvj5xk6xkbxm0000gq/T/tableau-temp/#TableauTemp_0o7klyu0m6iuxe11fr3k919h6mzr.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>intake_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[intake_date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>intake_date</remote-alias>
+              <ordinal>0</ordinal>
+              <family>mart_sla_daily.csv</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>180</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cases_in_sla_table</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[cases_in_sla_table]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cases_in_sla_table</remote-alias>
+              <ordinal>1</ordinal>
+              <family>mart_sla_daily.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>160</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cases_with_triage</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[cases_with_triage]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cases_with_triage</remote-alias>
+              <ordinal>2</ordinal>
+              <family>mart_sla_daily.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>160</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>sla_b_breach_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[sla_b_breach_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>sla_b_breach_pct</remote-alias>
+              <ordinal>3</ordinal>
+              <family>mart_sla_daily.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>125</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ft_p50_min</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[ft_p50_min]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ft_p50_min</remote-alias>
+              <ordinal>4</ordinal>
+              <family>mart_sla_daily.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>11</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ft_p90_min</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[ft_p90_min]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ft_p90_min</remote-alias>
+              <ordinal>5</ordinal>
+              <family>mart_sla_daily.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>53</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ft_p95_min</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[ft_p95_min]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ft_p95_min</remote-alias>
+              <ordinal>6</ordinal>
+              <family>mart_sla_daily.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>82</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cases_resolved</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[cases_resolved]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cases_resolved</remote-alias>
+              <ordinal>7</ordinal>
+              <family>mart_sla_daily.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>160</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>sla_a_breach_pct_including_cw</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[sla_a_breach_pct_including_cw]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>sla_a_breach_pct_including_cw</remote-alias>
+              <ordinal>8</ordinal>
+              <family>mart_sla_daily.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>172</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>sla_a_breach_pct_paused_cw</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[sla_a_breach_pct_paused_cw]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>sla_a_breach_pct_paused_cw</remote-alias>
+              <ordinal>9</ordinal>
+              <family>mart_sla_daily.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>169</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fr_p50_min_inc_cw</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fr_p50_min_inc_cw]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fr_p50_min_inc_cw</remote-alias>
+              <ordinal>10</ordinal>
+              <family>mart_sla_daily.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>56</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fr_p90_min_inc_cw</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fr_p90_min_inc_cw]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fr_p90_min_inc_cw</remote-alias>
+              <ordinal>11</ordinal>
+              <family>mart_sla_daily.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>149</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fr_p95_min_inc_cw</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fr_p95_min_inc_cw]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fr_p95_min_inc_cw</remote-alias>
+              <ordinal>12</ordinal>
+              <family>mart_sla_daily.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>156</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fr_p50_min_pause_cw</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fr_p50_min_pause_cw]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fr_p50_min_pause_cw</remote-alias>
+              <ordinal>13</ordinal>
+              <family>mart_sla_daily.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>49</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fr_p90_min_pause_cw</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fr_p90_min_pause_cw]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fr_p90_min_pause_cw</remote-alias>
+              <ordinal>14</ordinal>
+              <family>mart_sla_daily.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>138</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fr_p95_min_pause_cw</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fr_p95_min_pause_cw]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fr_p95_min_pause_cw</remote-alias>
+              <ordinal>15</ordinal>
+              <family>mart_sla_daily.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>162</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>dq_triage_missing_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[dq_triage_missing_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>dq_triage_missing_pct</remote-alias>
+              <ordinal>16</ordinal>
+              <family>mart_sla_daily.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>dq_terminal_missing_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[dq_terminal_missing_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>dq_terminal_missing_pct</remote-alias>
+              <ordinal>17</ordinal>
+              <family>mart_sla_daily.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.14qlk4x0myce1d1h93k8g15rb1td].[avg:sla_a_breach_pct_including_cw:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.14qlk4x0myce1d1h93k8g15rb1td].[cnt:sla_a_breach_pct_including_cw:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.14qlk4x0myce1d1h93k8g15rb1td].[sum:sla_a_breach_pct_including_cw:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.14qlk4x0myce1d1h93k8g15rb1td].[avg:fr_p95_min_inc_cw:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.14qlk4x0myce1d1h93k8g15rb1td].[sum:fr_p95_min_inc_cw:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.14qlk4x0myce1d1h93k8g15rb1td].[avg:fr_p50_min_inc_cw:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.14qlk4x0myce1d1h93k8g15rb1td].[sum:fr_p50_min_inc_cw:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.14qlk4x0myce1d1h93k8g15rb1td].[avg:fr_p90_min_inc_cw:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.14qlk4x0myce1d1h93k8g15rb1td].[sum:fr_p90_min_inc_cw:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.14qlk4x0myce1d1h93k8g15rb1td].[avg:sla_b_breach_pct:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.14qlk4x0myce1d1h93k8g15rb1td].[cnt:sla_b_breach_pct:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.14qlk4x0myce1d1h93k8g15rb1td].[sum:sla_b_breach_pct:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='mart_sla_daily.csv' id='mart_sla_daily.csv_3A23DEC02871452283FD540E835E65D4'>
+            <properties context=''>
+              <relation connection='textscan.0bsfugx13hgcci17t9gk90yhok58' name='mart_sla_daily.csv' table='[mart_sla_daily#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='date' name='intake_date' ordinal='0' />
+                  <column datatype='integer' name='cases_in_sla_table' ordinal='1' />
+                  <column datatype='real' name='cases_with_triage' ordinal='2' />
+                  <column datatype='real' name='sla_b_breach_pct' ordinal='3' />
+                  <column datatype='real' name='ft_p50_min' ordinal='4' />
+                  <column datatype='real' name='ft_p90_min' ordinal='5' />
+                  <column datatype='real' name='ft_p95_min' ordinal='6' />
+                  <column datatype='real' name='cases_resolved' ordinal='7' />
+                  <column datatype='real' name='sla_a_breach_pct_including_cw' ordinal='8' />
+                  <column datatype='real' name='sla_a_breach_pct_paused_cw' ordinal='9' />
+                  <column datatype='real' name='fr_p50_min_inc_cw' ordinal='10' />
+                  <column datatype='real' name='fr_p90_min_inc_cw' ordinal='11' />
+                  <column datatype='real' name='fr_p95_min_inc_cw' ordinal='12' />
+                  <column datatype='real' name='fr_p50_min_pause_cw' ordinal='13' />
+                  <column datatype='real' name='fr_p90_min_pause_cw' ordinal='14' />
+                  <column datatype='real' name='fr_p95_min_pause_cw' ordinal='15' />
+                  <column datatype='real' name='dq_triage_missing_pct' ordinal='16' />
+                  <column datatype='real' name='dq_terminal_missing_pct' ordinal='17' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='mart_sla_by_tier_case_type' inline='true' name='federated.1hy8h89058e4cz158xt911sxu3rj' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='mart_sla_by_tier_case_type' name='textscan.0cyc7f71wuuq5n18dfxhi1vue2sv'>
+            <connection class='textscan' directory='/Users/spartan/Desktop/Projects/ops-sla-bottleneck-analysis/data/exports' filename='mart_sla_by_tier_case_type.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0cyc7f71wuuq5n18dfxhi1vue2sv' name='mart_sla_by_tier_case_type.csv' table='[mart_sla_by_tier_case_type#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='tier' ordinal='0' />
+            <column datatype='string' name='case_type' ordinal='1' />
+            <column datatype='integer' name='cases' ordinal='2' />
+            <column datatype='real' name='sla_b_breach_pct' ordinal='3' />
+            <column datatype='real' name='ft_p50_min' ordinal='4' />
+            <column datatype='real' name='ft_p90_min' ordinal='5' />
+            <column datatype='real' name='ft_p95_min' ordinal='6' />
+            <column datatype='real' name='sla_a_breach_pct_including_cw' ordinal='7' />
+            <column datatype='real' name='sla_a_breach_pct_paused_cw' ordinal='8' />
+            <column datatype='real' name='fr_p50_min_inc_cw' ordinal='9' />
+            <column datatype='real' name='fr_p90_min_inc_cw' ordinal='10' />
+            <column datatype='real' name='fr_p95_min_inc_cw' ordinal='11' />
+            <column datatype='real' name='fr_p50_min_pause_cw' ordinal='12' />
+            <column datatype='real' name='fr_p90_min_pause_cw' ordinal='13' />
+            <column datatype='real' name='fr_p95_min_pause_cw' ordinal='14' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[mart_sla_by_tier_case_type.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tier</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[tier]</local-name>
+            <parent-name>[mart_sla_by_tier_case_type.csv]</parent-name>
+            <remote-alias>tier</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[mart_sla_by_tier_case_type.csv_C46B1DBC0F8D4286ABA8EF089C37E5CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>case_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[case_type]</local-name>
+            <parent-name>[mart_sla_by_tier_case_type.csv]</parent-name>
+            <remote-alias>case_type</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[mart_sla_by_tier_case_type.csv_C46B1DBC0F8D4286ABA8EF089C37E5CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cases</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[cases]</local-name>
+            <parent-name>[mart_sla_by_tier_case_type.csv]</parent-name>
+            <remote-alias>cases</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_by_tier_case_type.csv_C46B1DBC0F8D4286ABA8EF089C37E5CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sla_b_breach_pct</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[sla_b_breach_pct]</local-name>
+            <parent-name>[mart_sla_by_tier_case_type.csv]</parent-name>
+            <remote-alias>sla_b_breach_pct</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_by_tier_case_type.csv_C46B1DBC0F8D4286ABA8EF089C37E5CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ft_p50_min</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ft_p50_min]</local-name>
+            <parent-name>[mart_sla_by_tier_case_type.csv]</parent-name>
+            <remote-alias>ft_p50_min</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_by_tier_case_type.csv_C46B1DBC0F8D4286ABA8EF089C37E5CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ft_p90_min</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ft_p90_min]</local-name>
+            <parent-name>[mart_sla_by_tier_case_type.csv]</parent-name>
+            <remote-alias>ft_p90_min</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_by_tier_case_type.csv_C46B1DBC0F8D4286ABA8EF089C37E5CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ft_p95_min</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ft_p95_min]</local-name>
+            <parent-name>[mart_sla_by_tier_case_type.csv]</parent-name>
+            <remote-alias>ft_p95_min</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_by_tier_case_type.csv_C46B1DBC0F8D4286ABA8EF089C37E5CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sla_a_breach_pct_including_cw</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[sla_a_breach_pct_including_cw]</local-name>
+            <parent-name>[mart_sla_by_tier_case_type.csv]</parent-name>
+            <remote-alias>sla_a_breach_pct_including_cw</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_by_tier_case_type.csv_C46B1DBC0F8D4286ABA8EF089C37E5CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>sla_a_breach_pct_paused_cw</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[sla_a_breach_pct_paused_cw]</local-name>
+            <parent-name>[mart_sla_by_tier_case_type.csv]</parent-name>
+            <remote-alias>sla_a_breach_pct_paused_cw</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_by_tier_case_type.csv_C46B1DBC0F8D4286ABA8EF089C37E5CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fr_p50_min_inc_cw</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fr_p50_min_inc_cw]</local-name>
+            <parent-name>[mart_sla_by_tier_case_type.csv]</parent-name>
+            <remote-alias>fr_p50_min_inc_cw</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_by_tier_case_type.csv_C46B1DBC0F8D4286ABA8EF089C37E5CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fr_p90_min_inc_cw</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fr_p90_min_inc_cw]</local-name>
+            <parent-name>[mart_sla_by_tier_case_type.csv]</parent-name>
+            <remote-alias>fr_p90_min_inc_cw</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_by_tier_case_type.csv_C46B1DBC0F8D4286ABA8EF089C37E5CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fr_p95_min_inc_cw</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fr_p95_min_inc_cw]</local-name>
+            <parent-name>[mart_sla_by_tier_case_type.csv]</parent-name>
+            <remote-alias>fr_p95_min_inc_cw</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_by_tier_case_type.csv_C46B1DBC0F8D4286ABA8EF089C37E5CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fr_p50_min_pause_cw</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fr_p50_min_pause_cw]</local-name>
+            <parent-name>[mart_sla_by_tier_case_type.csv]</parent-name>
+            <remote-alias>fr_p50_min_pause_cw</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_by_tier_case_type.csv_C46B1DBC0F8D4286ABA8EF089C37E5CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fr_p90_min_pause_cw</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fr_p90_min_pause_cw]</local-name>
+            <parent-name>[mart_sla_by_tier_case_type.csv]</parent-name>
+            <remote-alias>fr_p90_min_pause_cw</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_by_tier_case_type.csv_C46B1DBC0F8D4286ABA8EF089C37E5CB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fr_p95_min_pause_cw</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[fr_p95_min_pause_cw]</local-name>
+            <parent-name>[mart_sla_by_tier_case_type.csv]</parent-name>
+            <remote-alias>fr_p95_min_pause_cw</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_sla_by_tier_case_type.csv_C46B1DBC0F8D4286ABA8EF089C37E5CB]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='mart_sla_by_tier_case_type.csv' datatype='table' name='[__tableau_internal_object_id__].[mart_sla_by_tier_case_type.csv_C46B1DBC0F8D4286ABA8EF089C37E5CB]' role='measure' type='quantitative' />
+      <column caption='Case Type' datatype='string' name='[case_type]' role='dimension' type='nominal' />
+      <column caption='Cases' datatype='integer' name='[cases]' role='measure' type='quantitative' />
+      <column caption='Fr P50 Min Inc Cw' datatype='real' name='[fr_p50_min_inc_cw]' role='measure' type='quantitative' />
+      <column caption='Fr P50 Min Pause Cw' datatype='real' name='[fr_p50_min_pause_cw]' role='measure' type='quantitative' />
+      <column caption='Fr P90 Min Inc Cw' datatype='real' name='[fr_p90_min_inc_cw]' role='measure' type='quantitative' />
+      <column caption='Fr P90 Min Pause Cw' datatype='real' name='[fr_p90_min_pause_cw]' role='measure' type='quantitative' />
+      <column caption='Fr P95 Min Inc Cw' datatype='real' name='[fr_p95_min_inc_cw]' role='measure' type='quantitative' />
+      <column caption='Fr P95 Min Pause Cw' datatype='real' name='[fr_p95_min_pause_cw]' role='measure' type='quantitative' />
+      <column caption='Ft P50 Min' datatype='real' name='[ft_p50_min]' role='measure' type='quantitative' />
+      <column caption='Ft P90 Min' datatype='real' name='[ft_p90_min]' role='measure' type='quantitative' />
+      <column caption='Ft P95 Min' datatype='real' name='[ft_p95_min]' role='measure' type='quantitative' />
+      <column caption='Sla A Breach Pct Including Cw' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[sla_a_breach_pct_including_cw]' role='measure' type='quantitative' />
+      <column caption='Sla A Breach Pct Paused Cw' datatype='real' name='[sla_a_breach_pct_paused_cw]' role='measure' type='quantitative' />
+      <column caption='Sla B Breach Pct' datatype='real' name='[sla_b_breach_pct]' role='measure' type='quantitative' />
+      <column caption='Tier' datatype='string' name='[tier]' role='dimension' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/hh/d17304116dz8mvj5xk6xkbxm0000gq/T/tableau-temp/#TableauTemp_0q3m0a605blbol152s9w003l90gd.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>tier</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[tier]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>tier</remote-alias>
+              <ordinal>0</ordinal>
+              <family>mart_sla_by_tier_case_type.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>case_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[case_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>case_type</remote-alias>
+              <ordinal>1</ordinal>
+              <family>mart_sla_by_tier_case_type.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cases</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[cases]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>cases</remote-alias>
+              <ordinal>2</ordinal>
+              <family>mart_sla_by_tier_case_type.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>sla_b_breach_pct</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[sla_b_breach_pct]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>sla_b_breach_pct</remote-alias>
+              <ordinal>3</ordinal>
+              <family>mart_sla_by_tier_case_type.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ft_p50_min</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[ft_p50_min]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ft_p50_min</remote-alias>
+              <ordinal>4</ordinal>
+              <family>mart_sla_by_tier_case_type.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>6</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ft_p90_min</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[ft_p90_min]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ft_p90_min</remote-alias>
+              <ordinal>5</ordinal>
+              <family>mart_sla_by_tier_case_type.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>ft_p95_min</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[ft_p95_min]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>ft_p95_min</remote-alias>
+              <ordinal>6</ordinal>
+              <family>mart_sla_by_tier_case_type.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>sla_a_breach_pct_including_cw</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[sla_a_breach_pct_including_cw]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>sla_a_breach_pct_including_cw</remote-alias>
+              <ordinal>7</ordinal>
+              <family>mart_sla_by_tier_case_type.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>sla_a_breach_pct_paused_cw</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[sla_a_breach_pct_paused_cw]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>sla_a_breach_pct_paused_cw</remote-alias>
+              <ordinal>8</ordinal>
+              <family>mart_sla_by_tier_case_type.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fr_p50_min_inc_cw</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fr_p50_min_inc_cw]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fr_p50_min_inc_cw</remote-alias>
+              <ordinal>9</ordinal>
+              <family>mart_sla_by_tier_case_type.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fr_p90_min_inc_cw</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fr_p90_min_inc_cw]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fr_p90_min_inc_cw</remote-alias>
+              <ordinal>10</ordinal>
+              <family>mart_sla_by_tier_case_type.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fr_p95_min_inc_cw</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fr_p95_min_inc_cw]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fr_p95_min_inc_cw</remote-alias>
+              <ordinal>11</ordinal>
+              <family>mart_sla_by_tier_case_type.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fr_p50_min_pause_cw</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fr_p50_min_pause_cw]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fr_p50_min_pause_cw</remote-alias>
+              <ordinal>12</ordinal>
+              <family>mart_sla_by_tier_case_type.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fr_p90_min_pause_cw</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fr_p90_min_pause_cw]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fr_p90_min_pause_cw</remote-alias>
+              <ordinal>13</ordinal>
+              <family>mart_sla_by_tier_case_type.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>fr_p95_min_pause_cw</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[fr_p95_min_pause_cw]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>fr_p95_min_pause_cw</remote-alias>
+              <ordinal>14</ordinal>
+              <family>mart_sla_by_tier_case_type.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>9</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='mart_sla_by_tier_case_type.csv' id='mart_sla_by_tier_case_type.csv_C46B1DBC0F8D4286ABA8EF089C37E5CB'>
+            <properties context=''>
+              <relation connection='textscan.0cyc7f71wuuq5n18dfxhi1vue2sv' name='mart_sla_by_tier_case_type.csv' table='[mart_sla_by_tier_case_type#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='tier' ordinal='0' />
+                  <column datatype='string' name='case_type' ordinal='1' />
+                  <column datatype='integer' name='cases' ordinal='2' />
+                  <column datatype='real' name='sla_b_breach_pct' ordinal='3' />
+                  <column datatype='real' name='ft_p50_min' ordinal='4' />
+                  <column datatype='real' name='ft_p90_min' ordinal='5' />
+                  <column datatype='real' name='ft_p95_min' ordinal='6' />
+                  <column datatype='real' name='sla_a_breach_pct_including_cw' ordinal='7' />
+                  <column datatype='real' name='sla_a_breach_pct_paused_cw' ordinal='8' />
+                  <column datatype='real' name='fr_p50_min_inc_cw' ordinal='9' />
+                  <column datatype='real' name='fr_p90_min_inc_cw' ordinal='10' />
+                  <column datatype='real' name='fr_p95_min_inc_cw' ordinal='11' />
+                  <column datatype='real' name='fr_p50_min_pause_cw' ordinal='12' />
+                  <column datatype='real' name='fr_p90_min_pause_cw' ordinal='13' />
+                  <column datatype='real' name='fr_p95_min_pause_cw' ordinal='14' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='mart_driver_stage_durations' inline='true' name='federated.064mj2t00j7hwb16xqzd30bksipq' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='mart_driver_stage_durations' name='textscan.1kh0u3n1glaxsn142soui0ac6h3n'>
+            <connection class='textscan' directory='/Users/spartan/Desktop/Projects/ops-sla-bottleneck-analysis/data/exports' filename='mart_driver_stage_durations.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1kh0u3n1glaxsn142soui0ac6h3n' name='mart_driver_stage_durations.csv' table='[mart_driver_stage_durations#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='tier' ordinal='0' />
+            <column datatype='real' name='p50_intake_to_triage' ordinal='1' />
+            <column datatype='real' name='p90_intake_to_triage' ordinal='2' />
+            <column datatype='real' name='p95_intake_to_triage' ordinal='3' />
+            <column datatype='real' name='p50_triage_to_assignment' ordinal='4' />
+            <column datatype='real' name='p90_triage_to_assignment' ordinal='5' />
+            <column datatype='real' name='p95_triage_to_assignment' ordinal='6' />
+            <column datatype='real' name='p50_assignment_to_investigation' ordinal='7' />
+            <column datatype='real' name='p90_assignment_to_investigation' ordinal='8' />
+            <column datatype='real' name='p95_assignment_to_investigation' ordinal='9' />
+            <column datatype='real' name='p50_investigation_to_reviewqa' ordinal='10' />
+            <column datatype='real' name='p90_investigation_to_reviewqa' ordinal='11' />
+            <column datatype='real' name='p95_investigation_to_reviewqa' ordinal='12' />
+            <column datatype='real' name='p50_reviewqa_to_resolved' ordinal='13' />
+            <column datatype='real' name='p90_reviewqa_to_resolved' ordinal='14' />
+            <column datatype='real' name='p95_reviewqa_to_resolved' ordinal='15' />
+            <column datatype='real' name='p50_total' ordinal='16' />
+            <column datatype='real' name='p90_total' ordinal='17' />
+            <column datatype='real' name='p95_total' ordinal='18' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[mart_driver_stage_durations.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>tier</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[tier]</local-name>
+            <parent-name>[mart_driver_stage_durations.csv]</parent-name>
+            <remote-alias>tier</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[mart_driver_stage_durations.csv_51FAA5AF231447BCBADFA38DE5A4DA25]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>p50_intake_to_triage</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[p50_intake_to_triage]</local-name>
+            <parent-name>[mart_driver_stage_durations.csv]</parent-name>
+            <remote-alias>p50_intake_to_triage</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_driver_stage_durations.csv_51FAA5AF231447BCBADFA38DE5A4DA25]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>p90_intake_to_triage</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[p90_intake_to_triage]</local-name>
+            <parent-name>[mart_driver_stage_durations.csv]</parent-name>
+            <remote-alias>p90_intake_to_triage</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_driver_stage_durations.csv_51FAA5AF231447BCBADFA38DE5A4DA25]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>p95_intake_to_triage</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[p95_intake_to_triage]</local-name>
+            <parent-name>[mart_driver_stage_durations.csv]</parent-name>
+            <remote-alias>p95_intake_to_triage</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_driver_stage_durations.csv_51FAA5AF231447BCBADFA38DE5A4DA25]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>p50_triage_to_assignment</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[p50_triage_to_assignment]</local-name>
+            <parent-name>[mart_driver_stage_durations.csv]</parent-name>
+            <remote-alias>p50_triage_to_assignment</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_driver_stage_durations.csv_51FAA5AF231447BCBADFA38DE5A4DA25]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>p90_triage_to_assignment</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[p90_triage_to_assignment]</local-name>
+            <parent-name>[mart_driver_stage_durations.csv]</parent-name>
+            <remote-alias>p90_triage_to_assignment</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_driver_stage_durations.csv_51FAA5AF231447BCBADFA38DE5A4DA25]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>p95_triage_to_assignment</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[p95_triage_to_assignment]</local-name>
+            <parent-name>[mart_driver_stage_durations.csv]</parent-name>
+            <remote-alias>p95_triage_to_assignment</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_driver_stage_durations.csv_51FAA5AF231447BCBADFA38DE5A4DA25]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>p50_assignment_to_investigation</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[p50_assignment_to_investigation]</local-name>
+            <parent-name>[mart_driver_stage_durations.csv]</parent-name>
+            <remote-alias>p50_assignment_to_investigation</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_driver_stage_durations.csv_51FAA5AF231447BCBADFA38DE5A4DA25]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>p90_assignment_to_investigation</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[p90_assignment_to_investigation]</local-name>
+            <parent-name>[mart_driver_stage_durations.csv]</parent-name>
+            <remote-alias>p90_assignment_to_investigation</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_driver_stage_durations.csv_51FAA5AF231447BCBADFA38DE5A4DA25]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>p95_assignment_to_investigation</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[p95_assignment_to_investigation]</local-name>
+            <parent-name>[mart_driver_stage_durations.csv]</parent-name>
+            <remote-alias>p95_assignment_to_investigation</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_driver_stage_durations.csv_51FAA5AF231447BCBADFA38DE5A4DA25]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>p50_investigation_to_reviewqa</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[p50_investigation_to_reviewqa]</local-name>
+            <parent-name>[mart_driver_stage_durations.csv]</parent-name>
+            <remote-alias>p50_investigation_to_reviewqa</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_driver_stage_durations.csv_51FAA5AF231447BCBADFA38DE5A4DA25]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>p90_investigation_to_reviewqa</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[p90_investigation_to_reviewqa]</local-name>
+            <parent-name>[mart_driver_stage_durations.csv]</parent-name>
+            <remote-alias>p90_investigation_to_reviewqa</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_driver_stage_durations.csv_51FAA5AF231447BCBADFA38DE5A4DA25]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>p95_investigation_to_reviewqa</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[p95_investigation_to_reviewqa]</local-name>
+            <parent-name>[mart_driver_stage_durations.csv]</parent-name>
+            <remote-alias>p95_investigation_to_reviewqa</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_driver_stage_durations.csv_51FAA5AF231447BCBADFA38DE5A4DA25]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>p50_reviewqa_to_resolved</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[p50_reviewqa_to_resolved]</local-name>
+            <parent-name>[mart_driver_stage_durations.csv]</parent-name>
+            <remote-alias>p50_reviewqa_to_resolved</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_driver_stage_durations.csv_51FAA5AF231447BCBADFA38DE5A4DA25]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>p90_reviewqa_to_resolved</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[p90_reviewqa_to_resolved]</local-name>
+            <parent-name>[mart_driver_stage_durations.csv]</parent-name>
+            <remote-alias>p90_reviewqa_to_resolved</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_driver_stage_durations.csv_51FAA5AF231447BCBADFA38DE5A4DA25]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>p95_reviewqa_to_resolved</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[p95_reviewqa_to_resolved]</local-name>
+            <parent-name>[mart_driver_stage_durations.csv]</parent-name>
+            <remote-alias>p95_reviewqa_to_resolved</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_driver_stage_durations.csv_51FAA5AF231447BCBADFA38DE5A4DA25]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>p50_total</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[p50_total]</local-name>
+            <parent-name>[mart_driver_stage_durations.csv]</parent-name>
+            <remote-alias>p50_total</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_driver_stage_durations.csv_51FAA5AF231447BCBADFA38DE5A4DA25]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>p90_total</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[p90_total]</local-name>
+            <parent-name>[mart_driver_stage_durations.csv]</parent-name>
+            <remote-alias>p90_total</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_driver_stage_durations.csv_51FAA5AF231447BCBADFA38DE5A4DA25]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>p95_total</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[p95_total]</local-name>
+            <parent-name>[mart_driver_stage_durations.csv]</parent-name>
+            <remote-alias>p95_total</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_driver_stage_durations.csv_51FAA5AF231447BCBADFA38DE5A4DA25]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='string' name='[:Measure Names]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;[federated.064mj2t00j7hwb16xqzd30bksipq].[sum:p95_assignment_to_investigation:qk]&quot;' value='Assignment → Investigation' />
+          <alias key='&quot;[federated.064mj2t00j7hwb16xqzd30bksipq].[sum:p95_intake_to_triage:qk]&quot;' value='Intake → Triage' />
+          <alias key='&quot;[federated.064mj2t00j7hwb16xqzd30bksipq].[sum:p95_investigation_to_reviewqa:qk]&quot;' value='Investigation → Review/QA' />
+          <alias key='&quot;[federated.064mj2t00j7hwb16xqzd30bksipq].[sum:p95_reviewqa_to_resolved:qk]&quot;' value='Review/QA → Resolved' />
+          <alias key='&quot;[federated.064mj2t00j7hwb16xqzd30bksipq].[sum:p95_triage_to_assignment:qk]&quot;' value='Triage → Assignment' />
+        </aliases>
+      </column>
+      <column caption='mart_driver_stage_durations.csv' datatype='table' name='[__tableau_internal_object_id__].[mart_driver_stage_durations.csv_51FAA5AF231447BCBADFA38DE5A4DA25]' role='measure' type='quantitative' />
+      <column caption='P50 Assignment To Investigation' datatype='real' name='[p50_assignment_to_investigation]' role='measure' type='quantitative' />
+      <column caption='P50 Intake To Triage' datatype='real' name='[p50_intake_to_triage]' role='measure' type='quantitative' />
+      <column caption='P50 Investigation To Reviewqa' datatype='real' name='[p50_investigation_to_reviewqa]' role='measure' type='quantitative' />
+      <column caption='P50 Reviewqa To Resolved' datatype='real' name='[p50_reviewqa_to_resolved]' role='measure' type='quantitative' />
+      <column caption='P50 Total' datatype='real' name='[p50_total]' role='measure' type='quantitative' />
+      <column caption='P50 Triage To Assignment' datatype='real' name='[p50_triage_to_assignment]' role='measure' type='quantitative' />
+      <column caption='P90 Assignment To Investigation' datatype='real' name='[p90_assignment_to_investigation]' role='measure' type='quantitative' />
+      <column caption='P90 Intake To Triage' datatype='real' name='[p90_intake_to_triage]' role='measure' type='quantitative' />
+      <column caption='P90 Investigation To Reviewqa' datatype='real' name='[p90_investigation_to_reviewqa]' role='measure' type='quantitative' />
+      <column caption='P90 Reviewqa To Resolved' datatype='real' name='[p90_reviewqa_to_resolved]' role='measure' type='quantitative' />
+      <column caption='P90 Total' datatype='real' name='[p90_total]' role='measure' type='quantitative' />
+      <column caption='P90 Triage To Assignment' datatype='real' name='[p90_triage_to_assignment]' role='measure' type='quantitative' />
+      <column caption='P95 Assignment To Investigation' datatype='real' name='[p95_assignment_to_investigation]' role='measure' type='quantitative' />
+      <column caption='P95 Intake To Triage' datatype='real' name='[p95_intake_to_triage]' role='measure' type='quantitative' />
+      <column caption='P95 Investigation To Reviewqa' datatype='real' name='[p95_investigation_to_reviewqa]' role='measure' type='quantitative' />
+      <column caption='P95 Reviewqa To Resolved' datatype='real' name='[p95_reviewqa_to_resolved]' role='measure' type='quantitative' />
+      <column caption='P95 Total' datatype='real' name='[p95_total]' role='measure' type='quantitative' />
+      <column caption='P95 Triage To Assignment' datatype='real' name='[p95_triage_to_assignment]' role='measure' type='quantitative' />
+      <column caption='Tier' datatype='string' name='[tier]' role='dimension' type='nominal' />
+      <column-instance column='[p95_assignment_to_investigation]' derivation='Sum' name='[sum:p95_assignment_to_investigation:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[p95_intake_to_triage]' derivation='Sum' name='[sum:p95_intake_to_triage:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[p95_investigation_to_reviewqa]' derivation='Sum' name='[sum:p95_investigation_to_reviewqa:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[p95_reviewqa_to_resolved]' derivation='Sum' name='[sum:p95_reviewqa_to_resolved:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[p95_triage_to_assignment]' derivation='Sum' name='[sum:p95_triage_to_assignment:qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/hh/d17304116dz8mvj5xk6xkbxm0000gq/T/tableau-temp/#TableauTemp_1854aty1jw2pru1aa9fil1npiz6e.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>tier</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[tier]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>tier</remote-alias>
+              <ordinal>0</ordinal>
+              <family>mart_driver_stage_durations.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>p50_intake_to_triage</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[p50_intake_to_triage]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>p50_intake_to_triage</remote-alias>
+              <ordinal>1</ordinal>
+              <family>mart_driver_stage_durations.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>p90_intake_to_triage</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[p90_intake_to_triage]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>p90_intake_to_triage</remote-alias>
+              <ordinal>2</ordinal>
+              <family>mart_driver_stage_durations.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>p95_intake_to_triage</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[p95_intake_to_triage]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>p95_intake_to_triage</remote-alias>
+              <ordinal>3</ordinal>
+              <family>mart_driver_stage_durations.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>p50_triage_to_assignment</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[p50_triage_to_assignment]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>p50_triage_to_assignment</remote-alias>
+              <ordinal>4</ordinal>
+              <family>mart_driver_stage_durations.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>p90_triage_to_assignment</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[p90_triage_to_assignment]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>p90_triage_to_assignment</remote-alias>
+              <ordinal>5</ordinal>
+              <family>mart_driver_stage_durations.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>p95_triage_to_assignment</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[p95_triage_to_assignment]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>p95_triage_to_assignment</remote-alias>
+              <ordinal>6</ordinal>
+              <family>mart_driver_stage_durations.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>p50_assignment_to_investigation</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[p50_assignment_to_investigation]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>p50_assignment_to_investigation</remote-alias>
+              <ordinal>7</ordinal>
+              <family>mart_driver_stage_durations.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>p90_assignment_to_investigation</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[p90_assignment_to_investigation]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>p90_assignment_to_investigation</remote-alias>
+              <ordinal>8</ordinal>
+              <family>mart_driver_stage_durations.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>p95_assignment_to_investigation</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[p95_assignment_to_investigation]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>p95_assignment_to_investigation</remote-alias>
+              <ordinal>9</ordinal>
+              <family>mart_driver_stage_durations.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>p50_investigation_to_reviewqa</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[p50_investigation_to_reviewqa]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>p50_investigation_to_reviewqa</remote-alias>
+              <ordinal>10</ordinal>
+              <family>mart_driver_stage_durations.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>p90_investigation_to_reviewqa</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[p90_investigation_to_reviewqa]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>p90_investigation_to_reviewqa</remote-alias>
+              <ordinal>11</ordinal>
+              <family>mart_driver_stage_durations.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>p95_investigation_to_reviewqa</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[p95_investigation_to_reviewqa]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>p95_investigation_to_reviewqa</remote-alias>
+              <ordinal>12</ordinal>
+              <family>mart_driver_stage_durations.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>p50_reviewqa_to_resolved</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[p50_reviewqa_to_resolved]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>p50_reviewqa_to_resolved</remote-alias>
+              <ordinal>13</ordinal>
+              <family>mart_driver_stage_durations.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>p90_reviewqa_to_resolved</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[p90_reviewqa_to_resolved]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>p90_reviewqa_to_resolved</remote-alias>
+              <ordinal>14</ordinal>
+              <family>mart_driver_stage_durations.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>p95_reviewqa_to_resolved</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[p95_reviewqa_to_resolved]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>p95_reviewqa_to_resolved</remote-alias>
+              <ordinal>15</ordinal>
+              <family>mart_driver_stage_durations.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>p50_total</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[p50_total]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>p50_total</remote-alias>
+              <ordinal>16</ordinal>
+              <family>mart_driver_stage_durations.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>p90_total</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[p90_total]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>p90_total</remote-alias>
+              <ordinal>17</ordinal>
+              <family>mart_driver_stage_durations.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>p95_total</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[p95_total]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>p95_total</remote-alias>
+              <ordinal>18</ordinal>
+              <family>mart_driver_stage_durations.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.064mj2t00j7hwb16xqzd30bksipq].[sum:p95_assignment_to_investigation:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.064mj2t00j7hwb16xqzd30bksipq].[sum:p95_intake_to_triage:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.064mj2t00j7hwb16xqzd30bksipq].[sum:p95_reviewqa_to_resolved:qk]&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.064mj2t00j7hwb16xqzd30bksipq].[sum:p95_triage_to_assignment:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.064mj2t00j7hwb16xqzd30bksipq].[sum:p95_investigation_to_reviewqa:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='mart_driver_stage_durations.csv' id='mart_driver_stage_durations.csv_51FAA5AF231447BCBADFA38DE5A4DA25'>
+            <properties context=''>
+              <relation connection='textscan.1kh0u3n1glaxsn142soui0ac6h3n' name='mart_driver_stage_durations.csv' table='[mart_driver_stage_durations#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='tier' ordinal='0' />
+                  <column datatype='real' name='p50_intake_to_triage' ordinal='1' />
+                  <column datatype='real' name='p90_intake_to_triage' ordinal='2' />
+                  <column datatype='real' name='p95_intake_to_triage' ordinal='3' />
+                  <column datatype='real' name='p50_triage_to_assignment' ordinal='4' />
+                  <column datatype='real' name='p90_triage_to_assignment' ordinal='5' />
+                  <column datatype='real' name='p95_triage_to_assignment' ordinal='6' />
+                  <column datatype='real' name='p50_assignment_to_investigation' ordinal='7' />
+                  <column datatype='real' name='p90_assignment_to_investigation' ordinal='8' />
+                  <column datatype='real' name='p95_assignment_to_investigation' ordinal='9' />
+                  <column datatype='real' name='p50_investigation_to_reviewqa' ordinal='10' />
+                  <column datatype='real' name='p90_investigation_to_reviewqa' ordinal='11' />
+                  <column datatype='real' name='p95_investigation_to_reviewqa' ordinal='12' />
+                  <column datatype='real' name='p50_reviewqa_to_resolved' ordinal='13' />
+                  <column datatype='real' name='p90_reviewqa_to_resolved' ordinal='14' />
+                  <column datatype='real' name='p95_reviewqa_to_resolved' ordinal='15' />
+                  <column datatype='real' name='p50_total' ordinal='16' />
+                  <column datatype='real' name='p90_total' ordinal='17' />
+                  <column datatype='real' name='p95_total' ordinal='18' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='mart_scenario_results' inline='true' name='federated.0qbipqv1y1un9y1ftoqsm0wt9mj5' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='mart_scenario_results' name='textscan.0hr6fi50tir8op147ebo50nlfenz'>
+            <connection class='textscan' directory='/Users/spartan/Desktop/Projects/ops-sla-bottleneck-analysis/data/exports' filename='mart_scenario_results.csv' password='' server='' workgroup-auth-mode='as-is' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0hr6fi50tir8op147ebo50nlfenz' name='mart_scenario_results.csv' table='[mart_scenario_results#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='string' name='scenario_name' ordinal='0' />
+            <column datatype='integer' name='eligible_cases' ordinal='1' />
+            <column datatype='real' name='baseline_breach_pct_inc' ordinal='2' />
+            <column datatype='real' name='scenario_breach_pct_inc' ordinal='3' />
+            <column datatype='real' name='baseline_breaches_inc' ordinal='4' />
+            <column datatype='real' name='scenario_breaches_inc' ordinal='5' />
+            <column datatype='real' name='breaches_avoided_inc' ordinal='6' />
+            <column datatype='real' name='resolution_hours_saved' ordinal='7' />
+            <column datatype='real' name='reopen_hours_saved' ordinal='8' />
+            <column datatype='real' name='total_hours_saved' ordinal='9' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[mart_scenario_results.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>scenario_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[scenario_name]</local-name>
+            <parent-name>[mart_scenario_results.csv]</parent-name>
+            <remote-alias>scenario_name</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[mart_scenario_results.csv_E03788B7F5CA4A7C87DE2BDDEDC20145]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>eligible_cases</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[eligible_cases]</local-name>
+            <parent-name>[mart_scenario_results.csv]</parent-name>
+            <remote-alias>eligible_cases</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_scenario_results.csv_E03788B7F5CA4A7C87DE2BDDEDC20145]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>baseline_breach_pct_inc</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[baseline_breach_pct_inc]</local-name>
+            <parent-name>[mart_scenario_results.csv]</parent-name>
+            <remote-alias>baseline_breach_pct_inc</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_scenario_results.csv_E03788B7F5CA4A7C87DE2BDDEDC20145]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>scenario_breach_pct_inc</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[scenario_breach_pct_inc]</local-name>
+            <parent-name>[mart_scenario_results.csv]</parent-name>
+            <remote-alias>scenario_breach_pct_inc</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_scenario_results.csv_E03788B7F5CA4A7C87DE2BDDEDC20145]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>baseline_breaches_inc</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[baseline_breaches_inc]</local-name>
+            <parent-name>[mart_scenario_results.csv]</parent-name>
+            <remote-alias>baseline_breaches_inc</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_scenario_results.csv_E03788B7F5CA4A7C87DE2BDDEDC20145]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>scenario_breaches_inc</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[scenario_breaches_inc]</local-name>
+            <parent-name>[mart_scenario_results.csv]</parent-name>
+            <remote-alias>scenario_breaches_inc</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_scenario_results.csv_E03788B7F5CA4A7C87DE2BDDEDC20145]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>breaches_avoided_inc</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[breaches_avoided_inc]</local-name>
+            <parent-name>[mart_scenario_results.csv]</parent-name>
+            <remote-alias>breaches_avoided_inc</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_scenario_results.csv_E03788B7F5CA4A7C87DE2BDDEDC20145]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>resolution_hours_saved</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[resolution_hours_saved]</local-name>
+            <parent-name>[mart_scenario_results.csv]</parent-name>
+            <remote-alias>resolution_hours_saved</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_scenario_results.csv_E03788B7F5CA4A7C87DE2BDDEDC20145]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>reopen_hours_saved</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[reopen_hours_saved]</local-name>
+            <parent-name>[mart_scenario_results.csv]</parent-name>
+            <remote-alias>reopen_hours_saved</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_scenario_results.csv_E03788B7F5CA4A7C87DE2BDDEDC20145]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_hours_saved</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[total_hours_saved]</local-name>
+            <parent-name>[mart_scenario_results.csv]</parent-name>
+            <remote-alias>total_hours_saved</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[mart_scenario_results.csv_E03788B7F5CA4A7C87DE2BDDEDC20145]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='mart_scenario_results.csv' datatype='table' name='[__tableau_internal_object_id__].[mart_scenario_results.csv_E03788B7F5CA4A7C87DE2BDDEDC20145]' role='measure' type='quantitative' />
+      <column caption='Baseline Breach Pct Inc' datatype='real' name='[baseline_breach_pct_inc]' role='measure' type='quantitative' />
+      <column caption='Baseline Breaches Inc' datatype='real' name='[baseline_breaches_inc]' role='measure' type='quantitative' />
+      <column caption='Breaches Avoided Inc' datatype='real' default-format='N' name='[breaches_avoided_inc]' role='measure' type='quantitative' />
+      <column caption='Eligible Cases' datatype='integer' name='[eligible_cases]' role='measure' type='quantitative' />
+      <column caption='Reopen Hours Saved' datatype='real' name='[reopen_hours_saved]' role='measure' type='quantitative' />
+      <column caption='Resolution Hours Saved' datatype='real' name='[resolution_hours_saved]' role='measure' type='quantitative' />
+      <column caption='Scenario Breach Pct Inc' datatype='real' name='[scenario_breach_pct_inc]' role='measure' type='quantitative' />
+      <column caption='Scenario Breaches Inc' datatype='real' name='[scenario_breaches_inc]' role='measure' type='quantitative' />
+      <column caption='Scenario Name' datatype='string' name='[scenario_name]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='&quot;S1_TIER3_reduce_investigation_to_reviewQA_20pct&quot;' value='Reduce Tier 3 QA Stage 20%' />
+          <alias key='&quot;S2_reduce_reopens_25pct&quot;' value='Reduce Reopens 25%' />
+          <alias key='&quot;S3_combined_S1_plus_S2&quot;' value='Combined Impact' />
+        </aliases>
+      </column>
+      <column caption='Total Hours Saved' datatype='real' default-format='n#,##0;-#,##0' name='[total_hours_saved]' role='measure' type='quantitative' />
+      <column-instance column='[scenario_name]' derivation='None' name='[none:scenario_name:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/hh/d17304116dz8mvj5xk6xkbxm0000gq/T/tableau-temp/#TableauTemp_0wzfdal0e8a9cg1fkzrrv1fbmshd.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>scenario_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[scenario_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>scenario_name</remote-alias>
+              <ordinal>0</ordinal>
+              <family>mart_scenario_results.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>eligible_cases</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[eligible_cases]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>eligible_cases</remote-alias>
+              <ordinal>1</ordinal>
+              <family>mart_scenario_results.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>baseline_breach_pct_inc</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[baseline_breach_pct_inc]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>baseline_breach_pct_inc</remote-alias>
+              <ordinal>2</ordinal>
+              <family>mart_scenario_results.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>scenario_breach_pct_inc</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[scenario_breach_pct_inc]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>scenario_breach_pct_inc</remote-alias>
+              <ordinal>3</ordinal>
+              <family>mart_scenario_results.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>baseline_breaches_inc</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[baseline_breaches_inc]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>baseline_breaches_inc</remote-alias>
+              <ordinal>4</ordinal>
+              <family>mart_scenario_results.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>scenario_breaches_inc</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[scenario_breaches_inc]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>scenario_breaches_inc</remote-alias>
+              <ordinal>5</ordinal>
+              <family>mart_scenario_results.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>breaches_avoided_inc</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[breaches_avoided_inc]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>breaches_avoided_inc</remote-alias>
+              <ordinal>6</ordinal>
+              <family>mart_scenario_results.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>resolution_hours_saved</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[resolution_hours_saved]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>resolution_hours_saved</remote-alias>
+              <ordinal>7</ordinal>
+              <family>mart_scenario_results.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>reopen_hours_saved</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[reopen_hours_saved]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>reopen_hours_saved</remote-alias>
+              <ordinal>8</ordinal>
+              <family>mart_scenario_results.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>total_hours_saved</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[total_hours_saved]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>total_hours_saved</remote-alias>
+              <ordinal>9</ordinal>
+              <family>mart_scenario_results.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:scenario_name:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;S3_combined_S1_plus_S2&quot;</bucket>
+            </map>
+            <map to='#9c755f'>
+              <bucket>&quot;S2_reduce_reopens_25pct&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;S1_TIER3_reduce_investigation_to_reviewQA_20pct&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='mart_scenario_results.csv' id='mart_scenario_results.csv_E03788B7F5CA4A7C87DE2BDDEDC20145'>
+            <properties context=''>
+              <relation connection='textscan.0hr6fi50tir8op147ebo50nlfenz' name='mart_scenario_results.csv' table='[mart_scenario_results#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='string' name='scenario_name' ordinal='0' />
+                  <column datatype='integer' name='eligible_cases' ordinal='1' />
+                  <column datatype='real' name='baseline_breach_pct_inc' ordinal='2' />
+                  <column datatype='real' name='scenario_breach_pct_inc' ordinal='3' />
+                  <column datatype='real' name='baseline_breaches_inc' ordinal='4' />
+                  <column datatype='real' name='scenario_breaches_inc' ordinal='5' />
+                  <column datatype='real' name='breaches_avoided_inc' ordinal='6' />
+                  <column datatype='real' name='resolution_hours_saved' ordinal='7' />
+                  <column datatype='real' name='reopen_hours_saved' ordinal='8' />
+                  <column datatype='real' name='total_hours_saved' ordinal='9' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='SLA A Breach Rate by Tier and Case Type'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontname='Benton Sans Book'>SLA A Breach Rate by Tier and Case Type</run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Benton Sans Book' fontsize='9'>Resolution SLA (24 Business Hours, Including Customer Wait)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mart_sla_by_tier_case_type' name='federated.1hy8h89058e4cz158xt911sxu3rj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1hy8h89058e4cz158xt911sxu3rj'>
+            <column-instance column='[sla_a_breach_pct_including_cw]' derivation='Avg' name='[avg:sla_a_breach_pct_including_cw:qk]' pivot='key' type='quantitative' />
+            <column caption='Case Type' datatype='string' name='[case_type]' role='dimension' type='nominal' />
+            <column caption='Cases' datatype='integer' name='[cases]' role='measure' type='quantitative' />
+            <column-instance column='[case_type]' derivation='None' name='[none:case_type:nk]' pivot='key' type='nominal' />
+            <column-instance column='[tier]' derivation='None' name='[none:tier:nk]' pivot='key' type='nominal' />
+            <column caption='Sla A Breach Pct Including Cw' datatype='real' default-format='n#,##0.00;-#,##0.00' name='[sla_a_breach_pct_including_cw]' role='measure' type='quantitative' />
+            <column-instance column='[cases]' derivation='Sum' name='[sum:cases:qk]' pivot='key' type='quantitative' />
+            <column caption='Tier' datatype='string' name='[tier]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1hy8h89058e4cz158xt911sxu3rj].[none:case_type:nk]' value='158' />
+          </style-rule>
+          <style-rule element='mark'>
+            <encoding attr='color' field='[federated.1hy8h89058e4cz158xt911sxu3rj].[avg:sla_a_breach_pct_including_cw:qk]' palette='red_10_0' type='interpolated' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Square' />
+            <encodings>
+              <color column='[federated.1hy8h89058e4cz158xt911sxu3rj].[avg:sla_a_breach_pct_including_cw:qk]' />
+              <text column='[federated.1hy8h89058e4cz158xt911sxu3rj].[sum:cases:qk]' />
+              <text column='[federated.1hy8h89058e4cz158xt911sxu3rj].[avg:sla_a_breach_pct_including_cw:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontalignment='0'><![CDATA[<[federated.1hy8h89058e4cz158xt911sxu3rj].[avg:sla_a_breach_pct_including_cw:qk]> %]]></run>
+                <run fontalignment='0'>Æ&#10;</run>
+                <run fontalignment='0' fontsize='8'><![CDATA[(<[federated.1hy8h89058e4cz158xt911sxu3rj].[sum:cases:qk]>)]]></run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-size' value='10' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1hy8h89058e4cz158xt911sxu3rj].[none:tier:nk]</rows>
+        <cols>[federated.1hy8h89058e4cz158xt911sxu3rj].[none:case_type:nk]</cols>
+      </table>
+      <simple-id uuid='{9E52FFAD-8327-46D8-8F1B-325B59AF129D}' />
+    </worksheet>
+    <worksheet name='SLA A Resolution Tail (Business Minutes)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontname='Benton Sans Book'>SLA A Resolution Tail (Business Minutes)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mart_sla_daily' name='federated.14qlk4x0myce1d1h93k8g15rb1td' />
+          </datasources>
+          <datasource-dependencies datasource='federated.14qlk4x0myce1d1h93k8g15rb1td'>
+            <column-instance column='[fr_p50_min_inc_cw]' derivation='Avg' name='[avg:fr_p50_min_inc_cw:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[fr_p90_min_inc_cw]' derivation='Avg' name='[avg:fr_p90_min_inc_cw:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[fr_p95_min_inc_cw]' derivation='Avg' name='[avg:fr_p95_min_inc_cw:qk]' pivot='key' type='quantitative' />
+            <column caption='Fr P50 Min Inc Cw' datatype='real' default-format='N' name='[fr_p50_min_inc_cw]' role='measure' type='quantitative' />
+            <column caption='Fr P90 Min Inc Cw' datatype='real' default-format='N' name='[fr_p90_min_inc_cw]' role='measure' type='quantitative' />
+            <column caption='Fr P95 Min Inc Cw' datatype='real' default-format='N' name='[fr_p95_min_inc_cw]' role='measure' type='quantitative' />
+            <column caption='Intake Date' datatype='date' name='[intake_date]' role='dimension' type='ordinal' />
+            <column-instance column='[intake_date]' derivation='None' name='[none:intake_date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[fr_p95_min_inc_cw]' derivation='Sum' name='[sum:fr_p95_min_inc_cw:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.14qlk4x0myce1d1h93k8g15rb1td].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.14qlk4x0myce1d1h93k8g15rb1td].[avg:fr_p50_min_inc_cw:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.14qlk4x0myce1d1h93k8g15rb1td].[avg:fr_p90_min_inc_cw:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.14qlk4x0myce1d1h93k8g15rb1td].[avg:fr_p95_min_inc_cw:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.14qlk4x0myce1d1h93k8g15rb1td].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.14qlk4x0myce1d1h93k8g15rb1td].[avg:fr_p50_min_inc_cw:qk]&quot;</bucket>
+              <bucket>&quot;[federated.14qlk4x0myce1d1h93k8g15rb1td].[avg:fr_p90_min_inc_cw:qk]&quot;</bucket>
+              <bucket>&quot;[federated.14qlk4x0myce1d1h93k8g15rb1td].[sum:fr_p95_min_inc_cw:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.14qlk4x0myce1d1h93k8g15rb1td].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.14qlk4x0myce1d1h93k8g15rb1td].[Multiple Values]' scope='rows' value='Business Minutes (INTAKE → RESOLVED)' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='line-visibility' id='refline0' value='on' />
+            <format attr='line-pattern-only' id='refline0' value='dotted' />
+            <format attr='stroke-size' id='refline0' value='1' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.14qlk4x0myce1d1h93k8g15rb1td].[:Measure Names]' />
+            </encodings>
+            <reference-line axis-column='[federated.14qlk4x0myce1d1h93k8g15rb1td].[Multiple Values]' enable-instant-analytics='true' formula='average' id='refline0' label-type='value' probability='95' scope='per-pane' value-column='[federated.14qlk4x0myce1d1h93k8g15rb1td].[Multiple Values]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.86756908893585205' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.14qlk4x0myce1d1h93k8g15rb1td].[Multiple Values]</rows>
+        <cols>[federated.14qlk4x0myce1d1h93k8g15rb1td].[none:intake_date:qk]</cols>
+      </table>
+      <simple-id uuid='{B5C56341-CFB5-4AEF-9D81-D01978B4A358}' />
+    </worksheet>
+    <worksheet name='SLA Breach Trend - Daily (6-Month View)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontname='Benton Sans Book'>SLA Breach Trend - Daily (6-Month View)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mart_sla_daily' name='federated.14qlk4x0myce1d1h93k8g15rb1td' />
+          </datasources>
+          <datasource-dependencies datasource='federated.14qlk4x0myce1d1h93k8g15rb1td'>
+            <column-instance column='[sla_a_breach_pct_including_cw]' derivation='Avg' name='[avg:sla_a_breach_pct_including_cw:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[sla_b_breach_pct]' derivation='Avg' name='[avg:sla_b_breach_pct:qk]' pivot='key' type='quantitative' />
+            <column caption='Intake Date' datatype='date' name='[intake_date]' role='dimension' type='ordinal' />
+            <column-instance column='[intake_date]' derivation='None' name='[none:intake_date:qk]' pivot='key' type='quantitative' />
+            <column caption='Sla A Breach Pct Including Cw' datatype='real' default-format='N' name='[sla_a_breach_pct_including_cw]' role='measure' type='quantitative' />
+            <column caption='Sla B Breach Pct' datatype='real' default-format='N' name='[sla_b_breach_pct]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.14qlk4x0myce1d1h93k8g15rb1td].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.14qlk4x0myce1d1h93k8g15rb1td].[avg:sla_a_breach_pct_including_cw:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.14qlk4x0myce1d1h93k8g15rb1td].[avg:sla_b_breach_pct:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.14qlk4x0myce1d1h93k8g15rb1td].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.14qlk4x0myce1d1h93k8g15rb1td].[avg:sla_a_breach_pct_including_cw:qk]&quot;</bucket>
+              <bucket>&quot;[federated.14qlk4x0myce1d1h93k8g15rb1td].[avg:sla_b_breach_pct:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <slices>
+            <column>[federated.14qlk4x0myce1d1h93k8g15rb1td].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.14qlk4x0myce1d1h93k8g15rb1td].[Multiple Values]' scope='rows' value='SLA Breach Rate (%)' />
+            <format attr='tick-color' value='#00000000' />
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.14qlk4x0myce1d1h93k8g15rb1td].[Multiple Values]' value='N' />
+          </style-rule>
+          <style-rule element='refline'>
+            <format attr='fill-above' id='refline0' value='#00000000' />
+            <format attr='fill-below' id='refline0' value='#00000000' />
+            <format attr='line-visibility' id='refline0' value='on' />
+            <format attr='line-pattern-only' id='refline0' value='dotted' />
+            <format attr='stroke-size' id='refline0' value='1' />
+            <format attr='text-format' id='refline0' value='n#,##0.00;-#,##0.00' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='line-visibility' value='on' />
+            <format attr='line-pattern-only' value='solid' />
+          </style-rule>
+          <style-rule element='zeroline'>
+            <format attr='stroke-size' value='0' />
+            <format attr='line-visibility' value='off' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.14qlk4x0myce1d1h93k8g15rb1td].[:Measure Names]' />
+            </encodings>
+            <reference-line axis-column='[federated.14qlk4x0myce1d1h93k8g15rb1td].[Multiple Values]' enable-instant-analytics='true' formula='average' id='refline0' label-type='value' probability='95' scope='per-table' value-column='[federated.14qlk4x0myce1d1h93k8g15rb1td].[Multiple Values]' z-order='1' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.1314364671707153' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.14qlk4x0myce1d1h93k8g15rb1td].[Multiple Values]</rows>
+        <cols>[federated.14qlk4x0myce1d1h93k8g15rb1td].[none:intake_date:qk]</cols>
+      </table>
+      <simple-id uuid='{E7DA6A4C-4192-4678-BE5E-A49E6D9A201A}' />
+    </worksheet>
+    <worksheet name='Scenario Impact - Quantified Improvement'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Scenario Impact - Quantified Improvement</run>
+            <run>Æ&#10;</run>
+            <run fontsize='11'>Modeled using 6-month synthetic operations dataset</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mart_scenario_results' name='federated.0qbipqv1y1un9y1ftoqsm0wt9mj5' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0qbipqv1y1un9y1ftoqsm0wt9mj5'>
+            <column caption='Breaches Avoided Inc' datatype='real' default-format='N' name='[breaches_avoided_inc]' role='measure' type='quantitative' />
+            <column-instance column='[scenario_name]' derivation='None' name='[none:scenario_name:nk]' pivot='key' type='nominal' />
+            <column caption='Scenario Name' datatype='string' name='[scenario_name]' role='dimension' type='nominal'>
+              <aliases>
+                <alias key='&quot;S1_TIER3_reduce_investigation_to_reviewQA_20pct&quot;' value='Reduce Tier 3 QA Stage 20%' />
+                <alias key='&quot;S2_reduce_reopens_25pct&quot;' value='Reduce Reopens 25%' />
+                <alias key='&quot;S3_combined_S1_plus_S2&quot;' value='Combined Impact' />
+              </aliases>
+            </column>
+            <column-instance column='[breaches_avoided_inc]' derivation='Sum' name='[sum:breaches_avoided_inc:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[total_hours_saved]' derivation='Sum' name='[sum:total_hours_saved:qk]' pivot='key' type='quantitative' />
+            <column caption='Total Hours Saved' datatype='real' default-format='n#,##0;-#,##0' name='[total_hours_saved]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <natural-sort column='[federated.0qbipqv1y1un9y1ftoqsm0wt9mj5].[none:scenario_name:nk]' direction='ASC' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0qbipqv1y1un9y1ftoqsm0wt9mj5].[none:scenario_name:nk]' value='184' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0qbipqv1y1un9y1ftoqsm0wt9mj5].[none:scenario_name:nk]' />
+              <tooltip column='[federated.0qbipqv1y1un9y1ftoqsm0wt9mj5].[sum:breaches_avoided_inc:qk]' />
+              <text column='[federated.0qbipqv1y1un9y1ftoqsm0wt9mj5].[sum:total_hours_saved:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-color' value='#4e79a7' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0qbipqv1y1un9y1ftoqsm0wt9mj5].[none:scenario_name:nk]</rows>
+        <cols>[federated.0qbipqv1y1un9y1ftoqsm0wt9mj5].[sum:total_hours_saved:qk]</cols>
+      </table>
+      <simple-id uuid='{21FD512F-1F08-46CF-9B2A-7DBA1B962D4E}' />
+    </worksheet>
+    <worksheet name='Tier 3 Bottleneck Stage (p95 Business Minutes)'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Tier 3 Bottleneck Stage (p95 Business Minutes)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='mart_driver_stage_durations' name='federated.064mj2t00j7hwb16xqzd30bksipq' />
+          </datasources>
+          <datasource-dependencies datasource='federated.064mj2t00j7hwb16xqzd30bksipq'>
+            <column-instance column='[tier]' derivation='None' name='[none:tier:nk]' pivot='key' type='nominal' />
+            <column caption='P95 Assignment To Investigation' datatype='real' name='[p95_assignment_to_investigation]' role='measure' type='quantitative' />
+            <column caption='P95 Intake To Triage' datatype='real' name='[p95_intake_to_triage]' role='measure' type='quantitative' />
+            <column caption='P95 Investigation To Reviewqa' datatype='real' name='[p95_investigation_to_reviewqa]' role='measure' type='quantitative' />
+            <column caption='P95 Reviewqa To Resolved' datatype='real' name='[p95_reviewqa_to_resolved]' role='measure' type='quantitative' />
+            <column caption='P95 Triage To Assignment' datatype='real' name='[p95_triage_to_assignment]' role='measure' type='quantitative' />
+            <column-instance column='[p95_assignment_to_investigation]' derivation='Sum' name='[sum:p95_assignment_to_investigation:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[p95_intake_to_triage]' derivation='Sum' name='[sum:p95_intake_to_triage:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[p95_investigation_to_reviewqa]' derivation='Sum' name='[sum:p95_investigation_to_reviewqa:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[p95_reviewqa_to_resolved]' derivation='Sum' name='[sum:p95_reviewqa_to_resolved:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[p95_triage_to_assignment]' derivation='Sum' name='[sum:p95_triage_to_assignment:qk]' pivot='key' type='quantitative' />
+            <column caption='Tier' datatype='string' name='[tier]' role='dimension' type='nominal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.064mj2t00j7hwb16xqzd30bksipq].[:Measure Names]'>
+            <groupfilter function='union' user:op='manual'>
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.064mj2t00j7hwb16xqzd30bksipq].[sum:p95_intake_to_triage:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.064mj2t00j7hwb16xqzd30bksipq].[sum:p95_triage_to_assignment:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.064mj2t00j7hwb16xqzd30bksipq].[sum:p95_assignment_to_investigation:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.064mj2t00j7hwb16xqzd30bksipq].[sum:p95_investigation_to_reviewqa:qk]&quot;' />
+              <groupfilter function='member' level='[:Measure Names]' member='&quot;[federated.064mj2t00j7hwb16xqzd30bksipq].[sum:p95_reviewqa_to_resolved:qk]&quot;' />
+            </groupfilter>
+          </filter>
+          <manual-sort column='[federated.064mj2t00j7hwb16xqzd30bksipq].[:Measure Names]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;[federated.064mj2t00j7hwb16xqzd30bksipq].[sum:p95_intake_to_triage:qk]&quot;</bucket>
+              <bucket>&quot;[federated.064mj2t00j7hwb16xqzd30bksipq].[sum:p95_triage_to_assignment:qk]&quot;</bucket>
+              <bucket>&quot;[federated.064mj2t00j7hwb16xqzd30bksipq].[sum:p95_assignment_to_investigation:qk]&quot;</bucket>
+              <bucket>&quot;[federated.064mj2t00j7hwb16xqzd30bksipq].[sum:p95_investigation_to_reviewqa:qk]&quot;</bucket>
+              <bucket>&quot;[federated.064mj2t00j7hwb16xqzd30bksipq].[sum:p95_reviewqa_to_resolved:qk]&quot;</bucket>
+            </dictionary>
+          </manual-sort>
+          <filter class='categorical' column='[federated.064mj2t00j7hwb16xqzd30bksipq].[none:tier:nk]'>
+            <groupfilter function='member' level='[none:tier:nk]' member='&quot;TIER_3&quot;' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.064mj2t00j7hwb16xqzd30bksipq].[none:tier:nk]</column>
+            <column>[federated.064mj2t00j7hwb16xqzd30bksipq].[:Measure Names]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.064mj2t00j7hwb16xqzd30bksipq].[Multiple Values]' scope='cols' value='Business Minutes (p95)' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='font-size' field='[federated.064mj2t00j7hwb16xqzd30bksipq].[:Measure Names]' value='12' />
+            <format attr='text-align' field='[federated.064mj2t00j7hwb16xqzd30bksipq].[:Measure Names]' value='center' />
+            <format attr='font-size' data-class='subtotal' value='10' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.064mj2t00j7hwb16xqzd30bksipq].[:Measure Names]' value='196' />
+            <format attr='text-align' data-class='subtotal' field='[federated.064mj2t00j7hwb16xqzd30bksipq].[:Measure Names]' value='center' />
+            <format attr='vertical-align' data-class='subtotal' field='[federated.064mj2t00j7hwb16xqzd30bksipq].[:Measure Names]' value='center' />
+            <format attr='background-color' field='[federated.064mj2t00j7hwb16xqzd30bksipq].[:Measure Names]' value='#ffffff' />
+            <format attr='font-size' data-class='total' field='[federated.064mj2t00j7hwb16xqzd30bksipq].[:Measure Names]' value='11' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.064mj2t00j7hwb16xqzd30bksipq].[Multiple Values]' value='N' />
+            <format attr='vertical-align' field='[federated.064mj2t00j7hwb16xqzd30bksipq].[:Measure Names]' value='center' />
+            <format attr='text-align' field='[federated.064mj2t00j7hwb16xqzd30bksipq].[:Measure Names]' value='right' />
+            <format attr='text-orientation' field='[federated.064mj2t00j7hwb16xqzd30bksipq].[:Measure Names]' value='0' />
+            <format attr='wrap' field='[federated.064mj2t00j7hwb16xqzd30bksipq].[:Measure Names]' value='auto' />
+            <format attr='font-size' field='[federated.064mj2t00j7hwb16xqzd30bksipq].[:Measure Names]' value='10' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.064mj2t00j7hwb16xqzd30bksipq].[:Measure Names]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='auto' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-size' value='9' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='size' value='1.5822099447250366' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.064mj2t00j7hwb16xqzd30bksipq].[:Measure Names]</rows>
+        <cols>[federated.064mj2t00j7hwb16xqzd30bksipq].[Multiple Values]</cols>
+      </table>
+      <simple-id uuid='{27253D6B-C19C-4041-A486-E5FDFB46FEE2}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Operational Bottleneck &amp; SLA Breach Analysis'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='16'>Operational Bottleneck &amp; SLA Breach Analysis</run>
+            <run>Æ&#10;</run>
+            <run fontsize='12'>B2B SaaS Security Ops | 6-Month Operational Simulation (300K Cases, 1.9M Events)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style />
+      <size minheight='1000' minwidth='1200' sizing-mode='range' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='76471' id='10' param='horz' type-v2='layout-flow' w='98714' x='643' y='800'>
+            <zone h='76471' id='23' is-fixed='true' type-v2='layout-basic' w='87701' x='643' y='800'>
+              <zone h='6122' id='5' param='vert' type-v2='layout-flow' w='87701' x='643' y='800'>
+                <zone h='6000' id='7' type-v2='title' w='87701' x='643' y='800'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone h='20593' id='24' param='vert' type-v2='layout-flow' w='87701' x='643' y='56678'>
+                <zone h='20593' id='6' type-v2='layout-basic' w='87701' x='643' y='56678'>
+                  <zone h='20593' id='17' name='SLA A Breach Rate by Tier and Case Type' show-title='false' w='43839' x='643' y='56678'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                  <zone h='20593' id='19' name='Tier 3 Bottleneck Stage (p95 Business Minutes)' show-title='false' w='43862' x='44482' y='56678'>
+                    <zone-style>
+                      <format attr='border-color' value='#000000' />
+                      <format attr='border-style' value='none' />
+                      <format attr='border-width' value='0' />
+                      <format attr='margin' value='4' />
+                    </zone-style>
+                  </zone>
+                </zone>
+              </zone>
+              <zone h='20237' id='25' name='SLA A Resolution Tail (Business Minutes)' show-title='false' w='87701' x='643' y='32879'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='18788' id='27' name='SLA Breach Trend - Daily (6-Month View)' show-title='false' w='87701' x='643' y='10507'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone forceUpdate='true' h='3585' id='29' type-v2='text' w='87701' x='643' y='6922'>
+                <formatted-text>
+                  <run fontalignment='1' fontcolor='#000000' fontname='Benton Sans Book'>SLA Breach Trend (Daily)</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone forceUpdate='true' h='3584' id='30' type-v2='text' w='87701' x='643' y='29295'>
+                <formatted-text>
+                  <run fontalignment='1' fontcolor='#000000' fontname='Benton Sans Book'>Resolution Tail — P50 / P90 / P95</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='3562' id='31' type-v2='text' w='87701' x='643' y='53116'>
+                <formatted-text>
+                  <run fontalignment='1' fontcolor='#000000' fontname='Benton Sans Book'>Tier 3 Bottleneck &amp; Tier-Level Risk</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='137' h='76471' id='9' is-fixed='true' layout-strategy-id='distribute-evenly' param='vert' type-v2='layout-flow' w='11013' x='88344' y='800'>
+              <zone h='25500' id='28' name='SLA Breach Trend - Daily (6-Month View)' pane-specification-id='1' param='[federated.14qlk4x0myce1d1h93k8g15rb1td].[:Measure Names]' type-v2='color' w='11013' x='88344' y='800'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='25500' id='26' name='SLA A Resolution Tail (Business Minutes)' pane-specification-id='3' param='[federated.14qlk4x0myce1d1h93k8g15rb1td].[:Measure Names]' type-v2='color' w='11013' x='88344' y='26300'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='25500' id='18' name='SLA A Breach Rate by Tier and Case Type' pane-specification-id='0' param='[federated.1hy8h89058e4cz158xt911sxu3rj].[avg:sla_a_breach_pct_including_cw:qk]' type-v2='color' w='11013' x='88344' y='51800'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='18367' id='21' name='Scenario Impact - Quantified Improvement' show-title='false' w='98714' x='643' y='80833'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='3562' id='32' type-v2='text' w='98714' x='643' y='77271'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#000000' fontname='Benton Sans Book'>Scenario Impact — Quantified Operational Savings</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <layout-options>
+            <title>
+              <formatted-text>
+                <run bold='true' fontsize='16'>Operational Bottleneck &amp; SLA Breach Analysis</run>
+                <run>Æ&#10;</run>
+                <run fontsize='12'>B2B SaaS Security Ops | 6-Month Operational Simulation (300K Cases, 1.9M Events)</run>
+              </formatted-text>
+            </title>
+          </layout-options>
+          <size maxheight='1550' minheight='1550' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='42' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98400' id='41' param='vert' type-v2='layout-flow' w='98714' x='643' y='800'>
+                <zone h='6000' id='7' type-v2='title' w='87701' x='643' y='800'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='3585' id='29' type-v2='text' w='87701' x='643' y='6922'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Benton Sans Book'>SLA Breach Trend (Daily)</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='180' h='18788' id='27' is-fixed='true' name='SLA Breach Trend - Daily (6-Month View)' show-title='false' w='87701' x='643' y='10507'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='25500' id='28' name='SLA Breach Trend - Daily (6-Month View)' pane-specification-id='1' param='[federated.14qlk4x0myce1d1h93k8g15rb1td].[:Measure Names]' type-v2='color' w='11013' x='88344' y='800'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='3584' id='30' type-v2='text' w='87701' x='643' y='29295'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Benton Sans Book'>Resolution Tail — P50 / P90 / P95</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='194' h='20237' id='25' is-fixed='true' name='SLA A Resolution Tail (Business Minutes)' show-title='false' w='87701' x='643' y='32879'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='25500' id='26' name='SLA A Resolution Tail (Business Minutes)' pane-specification-id='3' param='[federated.14qlk4x0myce1d1h93k8g15rb1td].[:Measure Names]' type-v2='color' w='11013' x='88344' y='26300'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='3562' id='31' type-v2='text' w='87701' x='643' y='53116'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Benton Sans Book'>Tier 3 Bottleneck &amp; Tier-Level Risk</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='198' h='20593' id='17' is-fixed='true' name='SLA A Breach Rate by Tier and Case Type' show-title='false' w='43839' x='643' y='56678'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='25500' id='18' name='SLA A Breach Rate by Tier and Case Type' pane-specification-id='0' param='[federated.1hy8h89058e4cz158xt911sxu3rj].[avg:sla_a_breach_pct_including_cw:qk]' type-v2='color' w='11013' x='88344' y='51800'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='198' h='20593' id='19' is-fixed='true' name='Tier 3 Bottleneck Stage (p95 Business Minutes)' show-title='false' w='43862' x='44482' y='56678'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='3562' id='32' type-v2='text' w='98714' x='643' y='77271'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#000000' fontname='Benton Sans Book'>Scenario Impact — Quantified Operational Savings</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='176' h='18367' id='21' is-fixed='true' name='Scenario Impact - Quantified Improvement' show-title='false' w='98714' x='643' y='80833'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{25D4A53D-3327-4417-A283-A48D9D840FB1}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='93'>
+    <window class='worksheet' name='SLA Breach Trend - Daily (6-Month View)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.14qlk4x0myce1d1h93k8g15rb1td].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{416D958D-D56F-4396-AC89-182054A678C3}' />
+    </window>
+    <window class='worksheet' name='SLA A Resolution Tail (Business Minutes)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='3' param='[federated.14qlk4x0myce1d1h93k8g15rb1td].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D8369433-0228-460C-A29C-599BC76EAEC5}' />
+    </window>
+    <window class='worksheet' name='SLA A Breach Rate by Tier and Case Type'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1hy8h89058e4cz158xt911sxu3rj].[avg:sla_a_breach_pct_including_cw:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D9E7AE57-EF21-4FEC-9425-136DCB7AED18}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Tier 3 Bottleneck Stage (p95 Business Minutes)'>
+      <cards>
+        <edge name='left'>
+          <strip size='159'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+            <card type='measures' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.064mj2t00j7hwb16xqzd30bksipq].[:Measure Names]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{63705DF7-8515-48A5-858D-C7DEF7DC599B}' />
+    </window>
+    <window class='worksheet' name='Scenario Impact - Quantified Improvement'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0qbipqv1y1un9y1ftoqsm0wt9mj5].[none:scenario_name:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{50A71C31-8845-4CF6-8696-4A4F7D3A5BC6}' />
+    </window>
+    <window class='dashboard' name='Operational Bottleneck &amp; SLA Breach Analysis'>
+      <viewpoints>
+        <viewpoint name='SLA A Breach Rate by Tier and Case Type'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='SLA A Resolution Tail (Business Minutes)'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='SLA Breach Trend - Daily (6-Month View)'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Scenario Impact - Quantified Improvement'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Tier 3 Bottleneck Stage (p95 Business Minutes)'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='19' />
+      <simple-id uuid='{B551C297-6C8F-4F49-BECA-E98A56BA7B91}' />
+    </window>
+  </windows>
+</workbook>

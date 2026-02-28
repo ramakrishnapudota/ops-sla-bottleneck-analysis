@@ -1,5 +1,19 @@
-.DS_Store
+# Python
 __pycache__/
+*.py[cod]
+
+# Virtual env / local tooling
 .venv/
-*.duckdb
+.vscode/
+
+# Data outputs (regenerable)
 data/exports/
+data/generated/
+reports/run_summaries/
+
+# Local databases / OS cruft
+*.duckdb
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/

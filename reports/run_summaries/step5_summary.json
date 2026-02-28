@@ -1,0 +1,31 @@
+{
+  "step": 5,
+  "runtime_seconds": {
+    "by_file": {
+      "sql/staging/s5_01_business_minutes_dim.sql": 0.015,
+      "sql/staging/s5_02_case_sla_metrics.sql": 0.565
+    },
+    "end_to_end": 1.439
+  },
+  "counts": {
+    "business_minutes_dim": 75000,
+    "case_sla_metrics": 292784
+  },
+  "breach_rates_pct": {
+    "sla_b_breach_pct": 11.827,
+    "sla_a_breach_pct_including_cw": 6.57,
+    "sla_a_breach_pct_paused_cw": 2.698
+  },
+  "triage_before_intake_pct_for_sla": 2.9175,
+  "percentiles_minutes": {
+    "ft_p50_min": 39.0,
+    "ft_p90_min": 131.0,
+    "ft_p95_min": 180.0,
+    "fr_p50_min_inc": 409.0,
+    "fr_p90_min_inc": 1102.0,
+    "fr_p95_min_inc": 1570.0,
+    "fr_p50_min_pause": 342.0,
+    "fr_p90_min_pause": 846.0,
+    "fr_p95_min_pause": 1060.0
+  }
+}

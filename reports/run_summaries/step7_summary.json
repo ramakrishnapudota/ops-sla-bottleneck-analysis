@@ -1,0 +1,38 @@
+{
+  "step": 7,
+  "runtime_seconds": {
+    "by_file": {
+      "sql/staging/s7_01_case_stage_durations.sql": 0.494,
+      "sql/staging/s7_00_case_congestion_exposure.sql": 0.266,
+      "sql/mart/s7_00_congestion_daily_v2.sql": 0.006,
+      "sql/mart/s7_01_driver_congestion_buckets.sql": 0.035,
+      "sql/mart/s7_02_driver_reopen_impact.sql": 0.025,
+      "sql/mart/s7_03_driver_stage_durations.sql": 0.019,
+      "sql/mart/s7_04_driver_summary.sql": 0.08
+    },
+    "end_to_end": 1.366
+  },
+  "counts": {
+    "staging_case_stage_durations": 82142,
+    "driver_congestion_buckets": 30,
+    "driver_reopen_impact": 18,
+    "driver_stage_durations": 3,
+    "driver_summary": 1
+  },
+  "driver_summary": {
+    "sla_b_breach_p50_cong": 12.627,
+    "sla_b_breach_p90_cong": 11.95,
+    "sla_b_breach_p95plus_cong": 11.487,
+    "sla_b_breach_lift_p90_vs_p50": -0.677,
+    "sla_b_breach_lift_p95_vs_p50": -1.14,
+    "sla_a_breach_p50_cong": 8.685,
+    "sla_a_breach_p90_cong": 6.729,
+    "sla_a_breach_p95plus_cong": 6.258,
+    "sla_a_breach_lift_p90_vs_p50": -1.956,
+    "sla_a_breach_lift_p95_vs_p50": -2.427
+  },
+  "tier3_p95_bottleneck_stage": {
+    "stage": "investigation_to_reviewqa",
+    "p95_minutes": 2641.7999999999993
+  }
+}
